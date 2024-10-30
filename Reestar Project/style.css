@@ -16,7 +16,7 @@
 
 .container {
     text-align: center;
-    margin: 50px auto;
+    margin: 40px auto;
 }
 
 .container__box {
@@ -48,7 +48,7 @@
 .contact {
     background-color: black;
     color: white;
-    padding: 18px;
+    padding: 11px;
     text-align: center;
 }
 

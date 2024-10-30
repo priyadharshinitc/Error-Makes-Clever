@@ -18,7 +18,7 @@ This is the README file for the Reestar Restaurant website, built using HTML and
 
 ## Getting Started
 
-You can access my Portfolio website by visiting [https://priyadharshinitc.github.io/Error-Makes-Clever/Reestar%20Project/index.html]. Feel free to explore the content and get in touch!
+You can access my Reestar website by visiting [https://priyadharshinitc.github.io/Error-Makes-Clever/Reestar%20Project/index.html]. Feel free to explore the content and get in touch!
 
 ## Contributing
 If you would like to contribute or suggest improvements, please feel free to open an issue or create a pull request. Your feedback is greatly appreciated.

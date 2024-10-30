@@ -14,7 +14,7 @@ Welcome to my Portfolio Website! This project is a simple two-page site that sho
 
 ## Getting Started
 
-You can access my Portfolio website by visiting [Link]. Feel free to explore the content and get in touch!
+You can access my Portfolio website by visiting [https://priyadharshinitc.github.io/Error-Makes-Clever/Portfolio/index.html]. Feel free to explore the content and get in touch!
 
 ## Contributing
 

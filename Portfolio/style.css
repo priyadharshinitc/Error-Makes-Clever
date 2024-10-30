@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Young Serif", serif;
+}
+
+/* Adding Basic Styles Start */
+.container {
+    padding: 50px;
+}
+
+.section-one {
+    background: black;
+    color: white;
+    padding: 20px;
+}
+
+.section-one__name {
+    font-size: 60px;
+}
+
+.section-one__role {
+    font-size: 30px;
+    margin-top: 10px;
+}
+
+.section-one__contact {
+    background: orangered;
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+    /* Since <a> tag is inline element, it clashes with previous <p> element. So changing it from "inline" to "inline-block" */
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.section-two, .section-three, .section-four, .section-five {
+    margin-top: 20px;
+}
+
+.section-two__desc, .section-three__desc, .section-four__desc, .section-five__desc {
+    margin-top: 10px;
+}
+
+.section-three li, .section-four li {
+    list-style: none;
+}
+.section-five {
+    background: black;
+    color: white;
+    padding: 20px;
+}
+
+.section-five__title a {
+    color: skyblue;
+}
+/* Adding Basic Styles End */
+
+/* Working with Display Properties Start */
+.section-three {
+    background: #6462FD;
+    color: black;
+    padding: 20px;
+    display: inline-block;
+    height: 200px;
+    border-radius: 10px;
+    vertical-align: top;
+}
+
+/* Note: When there is an inline / inline-block elements inside a container, based on the content inside the inline / inline-block element, their alignment may change. So use vertical-align to make the changes to the alignment. */
+
+.section-four {
+    background: #FE7517;
+    color: black;
+    padding: 20px;
+    display: inline-block;
+    height: 200px;
+    border-radius: 10px;
+    vertical-align: top;
+}
+/* Working with Display Properties End */
+
+/* Styling Contact Form Start */
+.contact-form {
+    margin-top: 20px;
+}
+
+.contact-form__input,
+.contact-form__textarea, 
+.contact-form__submit {
+    margin-top: 10px;
+}
+
+.contact-form__input {
+    padding: 10px;
+    border: none;
+    border-bottom: 1px solid black;
+}
+
+.contact-form__textarea {
+    padding: 10px;
+    border: none;
+    border: 1px solid black;
+}
+
+.contact-form__submit {
+    background: orangered;
+    padding: 10px 20px;
+    border: none;
+    color: black;
+}
+/* Styling Contact Form End */

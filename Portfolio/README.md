@@ -16,7 +16,7 @@ Welcome to my Portfolio Website! This project is a simple two-page site that sho
 
 You can access my Portfolio website by visiting [https://priyadharshinitc.github.io/Error-Makes-Clever/Portfolio/index.html]. Feel free to explore the content and get in touch!
 
-## Contributing
+## Contribution
 
 If you would like to contribute or suggest improvements, please feel free to open an issue or create a pull request. Your feedback is greatly appreciated.
 

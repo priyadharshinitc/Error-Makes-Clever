@@ -37,6 +37,13 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    transition: all 0.5s;
+}
+
+.card:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+    background: #31511E;
 }
 
 .card__title {

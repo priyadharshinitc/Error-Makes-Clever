@@ -9,32 +9,36 @@ body {
 
 /* Adding Basic Styles Start */
 .container {
-    padding: 50px;
+    padding: 40px;
 }
 
 .section-one {
-    background: black;
-    color: white;
+    background: #1A1A19;
+    color: #F6FCDF;
     padding: 20px;
 }
 
 .section-one__name {
-    font-size: 60px;
+    font-size: 40px;
 }
 
 .section-one__role {
-    font-size: 30px;
+    font-size: 25px;
     margin-top: 10px;
 }
 
 .section-one__contact {
-    background: orangered;
-    color: white;
+    background: #859F3D;
+    color: #F6FCDF;
     text-decoration: none;
     padding: 5px 10px;
     /* Since <a> tag is inline element, it clashes with previous <p> element. So changing it from "inline" to "inline-block" */
     display: inline-block;
     margin-top: 10px;
+}
+
+.section-one__contact:hover {
+    transform: scale(1.05);
 }
 
 .section-two, .section-three, .section-four, .section-five {
@@ -49,20 +53,24 @@ body {
     list-style: none;
 }
 .section-five {
-    background: black;
-    color: white;
+    background: #1A1A19;
+    color: #F6FCDF;
     padding: 20px;
 }
 
 .section-five__title a {
     color: skyblue;
 }
+
+.section-five__title a:hover {
+    color: #859F3D;
+}
 /* Adding Basic Styles End */
 
 /* Working with Display Properties Start */
 .section-three {
-    background: #6462FD;
-    color: black;
+    background: #31511E;
+    color: #F6FCDF;
     padding: 20px;
     display: inline-block;
     height: 200px;
@@ -73,8 +81,8 @@ body {
 /* Note: When there is an inline / inline-block elements inside a container, based on the content inside the inline / inline-block element, their alignment may change. So use vertical-align to make the changes to the alignment. */
 
 .section-four {
-    background: #FE7517;
-    color: black;
+    background: #6c822f;
+    color: #F6FCDF;
     padding: 20px;
     display: inline-block;
     height: 200px;
@@ -107,9 +115,16 @@ body {
 }
 
 .contact-form__submit {
-    background: orangered;
+    background: #859F3D;
+    font-family: "Young Serif", serif;
     padding: 10px 20px;
     border: none;
-    color: black;
+    color: #F6FCDF;
+}
+
+.contact-form__submit:hover {
+    cursor: pointer;
+    font-weight: 500;
+    transform: scale(1.01);
 }
 /* Styling Contact Form End */

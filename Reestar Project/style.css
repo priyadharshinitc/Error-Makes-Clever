@@ -10,13 +10,23 @@
     text-align: center;
 }
 
-.navbar p {
+.navbar__options {
     color: gray;
+    
+}
+
+.navbar__options li {
+    display: inline;
+}
+
+.navbar__options li:hover {
+    cursor: pointer;
+    color: yellow;
 }
 
 .container {
     text-align: center;
-    margin: 40px auto;
+    margin: 45px auto;
 }
 
 .container__box {
@@ -27,6 +37,11 @@
     text-align: center;
 }
 
+.container__box:hover {
+    cursor: pointer;
+    background: #a2f2d7;
+}
+
 .container__box img {
     width: 200px;
     height: 250px;
@@ -35,7 +50,9 @@
 .container__box button {
     background-color: black;
     color: white;
-    padding: 10px 5px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 16px;
+    padding: 10px 8px;
     margin: 5px;
     border: none;
 }
@@ -48,7 +65,7 @@
 .contact {
     background-color: black;
     color: white;
-    padding: 11px;
+    padding: 20px;
     text-align: center;
 }
 
@@ -70,6 +87,8 @@
 .contact__form button{
     background-color: yellow;
     color: black;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 16px;
     width: 350px;
     height: 20px;
     margin-top: 10px;
@@ -80,6 +99,7 @@
     &:hover{
         background-color: green;
         color: white;
+        cursor: pointer;
     }
 }
 

@@ -76,6 +76,48 @@ body {
 }
 /* Navbar End */
 
+/* Sale Image Start */
+.sale-image {
+    position: relative;
+}
+
+.sale-image img {
+    width: 100%;
+}
+
+.sale-image__sale-card {
+    padding: 15px;
+    display: inline-block;
+    width: 400px;
+    background-color: white;
+    color: black;
+    border: 2px solid black;
+    /* visibility: hidden; */
+
+    /* Positioning */
+    position: absolute;
+    top: 20%;
+    left: 15%;
+
+    /* Animation */
+    opacity: 0;
+    animation: zoom 1s ease-in;
+    animation-fill-mode: forwards;
+}
+
+@keyframes zoom {
+    0% {
+        opacity: 0;
+        transform: scale(0);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+/* Sale Image End */
+
 /* Categories Start */
 .categories {
     display: flex;
@@ -103,46 +145,6 @@ body {
     
 }
 /* Categories End */
-
-/* Sale Image Start */
-.sale-image {
-    position: relative;
-}
-
-.sale-image img {
-    width: 100%;
-}
-
-.sale-image__sale-card {
-    padding: 15px;
-    display: inline-block;
-    width: 400px;
-    background-color: white;
-    color: black;
-    border: 2px solid black;
-    /* visibility: hidden; */
-
-    /* Positioning */
-    position: absolute;
-    top: 20%;
-    left: 15%;
-
-    /* Animation */
-    animation: fadeIn 0.5s ease-in;
-}
-
-@keyframes fadeIn {
-    0% {
-        opacity: 0.5;
-        transform: scale(0.8);
-    }
-
-    100% {
-        opacity: 1;
-        transform: scale(1);
-    }
-}
-/* Sale Image End */
 
 /* Recommendation Start */
 .recommendation {

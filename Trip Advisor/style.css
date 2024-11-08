@@ -13,8 +13,10 @@
     --2px: 0.125rem;
     --5px: 0.3125rem;
     --10px: 0.625rem;
+    --13px: 0.8125rem;
     --16px: 1rem;
     --20px: 1.25rem;
+    --24px: 1.5rem;
     --30px: 1.875rem;
     --32px: 2rem;
     --40px: 2.5rem;
@@ -23,7 +25,7 @@
 
 body {
     background: var(--primary-color);
-    font-family: "Poppins", sans-serif;
+    font-family: "Roboto", sans-serif;
     font-style: normal;
     padding: 0 10rem;
 }
@@ -31,6 +33,7 @@ body {
 /* Navbar Start */
 nav {
     padding: var(--10px);
+    margin: var(--16px) auto;
     /* border: 2px solid red; */
 }
 
@@ -142,7 +145,8 @@ nav {
     background: black;
     color: white;
     border-radius: var(--30px);
-    font-family: "Poppins", sans-serif;
+    font-family: "Roboto", sans-serif;
+    font-size: var(--16px);
     font-style: normal;
     font-weight: bold;
 }
@@ -265,11 +269,61 @@ nav {
     margin: var(--48px) auto;
     width: 100%;
     height: 80vh;
+    position: relative;
 }
 
 .ai-beta img {
     width: 100%;
     height: 80%;
-    position: relative;
+}
+
+.ai-beta__textarea {
+    color: white;
+    width: 35%;
+    position: absolute;
+    top: 15%;
+    left: 15%;
+    z-index: 1;
+}
+
+.ai-beta__textarea__p1 {
+    font-size: var(--13px);
+}
+
+#beta-btn {
+    padding: 3px var(--5px);
+    border-radius: var(--5px);
+    background: white;
+    color: black;
+    font-size: var(--13px);
+    font-weight: bold;
+    margin-left: var(--5px);
+}
+
+.ai-beta__textarea__title {
+    font-size: var(--48px);
+    font-weight: 900;
+    line-height: 1.5cm;
+}
+
+.ai-beta__textarea__p2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: var(--10px);
+}
+
+.ai-beta__button {
+    background: #DFD3EE;
+    color: #301D49;
+    padding: var(--16px) var(--20px);
+    margin-top: var(--16px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ai-beta__button:hover {
+    cursor: pointer;
+    background: rgb(195, 147, 253);
 }
 /* AI Beta Section End */

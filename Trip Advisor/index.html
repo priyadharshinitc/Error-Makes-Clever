@@ -9,7 +9,7 @@
     <!-- Google Fonts Link -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 
     <!-- Font Awesome CDN Link -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -100,14 +100,47 @@
     <!-- AI Beta Section Start -->
     <section class="ai-beta">
         <img src="./Images/Home AI.jpg" alt="Trekking Image">
-        <p>Powered by AI <span>BETA</span></p>
-        <h1>AI trip builder gets you out there</h1>
-        <p>Get a whole getaway's worth of ideas made for you—ready in seconds.</p>
-        <button>
-            <svg viewBox="0 0 24 24" width="20px" height="20px" class="d Vb UmNoP"><path fill-rule="evenodd" clip-rule="evenodd" d="M12.53 5.116a5.27 5.27 0 0 1-3.118-3.118c-.108-.294-.534-.294-.642 0a5.24 5.24 0 0 1-3.115 3.118c-.294.108-.294.534 0 .642a5.27 5.27 0 0 1 3.118 3.118c.108.294.534.294.642 0a5.27 5.27 0 0 1 3.118-3.118c.294-.108.294-.534 0-.642zm1.735-.418a.746.746 0 0 0 0 1.493c3.056 0 5.528 2.45 5.528 5.401 0 1.549-.806 3.252-2.05 4.952-1.095 1.495-2.404 2.828-3.468 3.882-1.07-1.054-2.399-2.401-3.503-3.91-1.234-1.69-2.033-3.382-2.033-4.924a.746.746 0 1 0-1.493 0c0 2.019 1.024 4.029 2.32 5.804 1.299 1.774 2.872 3.32 3.98 4.407l.04.04.16.16a.746.746 0 0 0 1.048.01l.15-.146.02-.02.053-.056.003-.002c1.102-1.09 2.645-2.613 3.927-4.362 1.306-1.785 2.339-3.808 2.339-5.835 0-3.803-3.168-6.894-7.021-6.894m-1.02 5.244a1.266 1.266 0 0 1 1.647.666 1.22 1.22 0 0 1-.678 1.599 1.266 1.266 0 0 1-1.647-.666 1.22 1.22 0 0 1 .679-1.6m-.566-1.389c1.397-.57 3.01.077 3.596 1.475a2.72 2.72 0 0 1-1.495 3.568c-1.397.57-3.01-.078-3.596-1.476a2.717 2.717 0 0 1 1.495-3.567M5.555 7.17a3.76 3.76 0 0 0 2.228 2.227h.002c.21.077.21.382 0 .459a3.77 3.77 0 0 0-2.228 2.227c-.077.21-.38.21-.458 0a3.77 3.77 0 0 0-2.227-2.227c-.21-.077-.21-.382 0-.459A3.74 3.74 0 0 0 5.097 7.17c.077-.21.381-.21.458 0"></path></svg>
-            <span>Try it</span>
-        </button>
+        <div class="ai-beta__textarea">
+            <p class="ai-beta__textarea__p1">Powered by AI <span id="beta-btn">BETA</span></p>
+            <h1 class="ai-beta__textarea__title">AI trip builder gets you out there</h1>
+            <p class="ai-beta__textarea__p2">Get a whole getaway's worth of ideas made for you—ready in seconds.</p>
+            <button class="button ai-beta__button">
+                <svg viewBox="0 0 24 24" width="20px" height="20px" class="d Vb UmNoP"><path fill-rule="evenodd" clip-rule="evenodd" d="M12.53 5.116a5.27 5.27 0 0 1-3.118-3.118c-.108-.294-.534-.294-.642 0a5.24 5.24 0 0 1-3.115 3.118c-.294.108-.294.534 0 .642a5.27 5.27 0 0 1 3.118 3.118c.108.294.534.294.642 0a5.27 5.27 0 0 1 3.118-3.118c.294-.108.294-.534 0-.642zm1.735-.418a.746.746 0 0 0 0 1.493c3.056 0 5.528 2.45 5.528 5.401 0 1.549-.806 3.252-2.05 4.952-1.095 1.495-2.404 2.828-3.468 3.882-1.07-1.054-2.399-2.401-3.503-3.91-1.234-1.69-2.033-3.382-2.033-4.924a.746.746 0 1 0-1.493 0c0 2.019 1.024 4.029 2.32 5.804 1.299 1.774 2.872 3.32 3.98 4.407l.04.04.16.16a.746.746 0 0 0 1.048.01l.15-.146.02-.02.053-.056.003-.002c1.102-1.09 2.645-2.613 3.927-4.362 1.306-1.785 2.339-3.808 2.339-5.835 0-3.803-3.168-6.894-7.021-6.894m-1.02 5.244a1.266 1.266 0 0 1 1.647.666 1.22 1.22 0 0 1-.678 1.599 1.266 1.266 0 0 1-1.647-.666 1.22 1.22 0 0 1 .679-1.6m-.566-1.389c1.397-.57 3.01.077 3.596 1.475a2.72 2.72 0 0 1-1.495 3.568c-1.397.57-3.01-.078-3.596-1.476a2.717 2.717 0 0 1 1.495-3.567M5.555 7.17a3.76 3.76 0 0 0 2.228 2.227h.002c.21.077.21.382 0 .459a3.77 3.77 0 0 0-2.228 2.227c-.077.21-.38.21-.458 0a3.77 3.77 0 0 0-2.227-2.227c-.21-.077-.21-.382 0-.459A3.74 3.74 0 0 0 5.097 7.17c.077-.21.381-.21.458 0"></path></svg>
+                <span>Try it</span>
+            </button>
+        </div>
     </section>
     <!-- AI Beta Section End -->
+
+    <main class="main-s1">
+        <h1>Treat yourself to an award-winning meal</h1>
+        <p>2024’s Travellers’ Choice Awards Best of the Best Restaurants</p>
+        <div class="main-s1__img-container">
+            <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2d/6d/e6/26/caption.jpg?w=300&amp;h=-1&amp;s=1" alt="Fine Dining" loading="lazy">
+            <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2d/6d/e6/06/caption.jpg?w=300&amp;h=-1&amp;s=1" alt="Date Night" loading="lazy">
+            <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2d/6d/e6/5e/caption.jpg?w=300&amp;h=-1&amp;s=1" alt="Casual Dining" loading="lazy">
+            <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2d/6d/e6/df/caption.jpg?w=300&amp;h=-1&amp;s=1" alt="Hidden Gems" loading="lazy">
+        </main>
+    </main>
+
+    <main class="main-s2">
+        <h1>Treat yourself to an award-winning meal</h1>
+    </main>
+
+    <main class="main-s3">
+        <h1>Treat yourself to an award-winning meal</h1>
+    </main>
+
+    <main class="main-s4">
+        <h1>Treat yourself to an award-winning meal</h1>
+    </main>
+
+    <main class="main-s5">
+        <h1>Treat yourself to an award-winning meal</h1>
+    </main>
+
+    <main class="main-s6">
+        <h1>Treat yourself to an award-winning meal</h1>
+    </main>
 </body>
 </html>

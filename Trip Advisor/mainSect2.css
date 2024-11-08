@@ -1,0 +1,91 @@
+/* Main Section 2 Start */
+.main-s2, 
+.main-s3, 
+.main-s4, 
+.main-s5, 
+.main-s6 {
+    margin-top: var(--48px);
+}
+
+.main-s2__card-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main-s2__card {    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* border: 2px solid salmon; */
+}
+
+.main-s2__img-container {
+    position: relative;
+}
+
+.main-s2__card__img {
+    width: 350px;
+    height: 200px;
+    margin-bottom: var(--16px);
+    border-radius: var(--10px);
+}
+
+.main-s2__img-container:hover::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 350px;
+    height: 200px;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.card__name {
+    font-weight: 500;
+    margin-bottom: var(--5px);
+}
+
+.main-s2__mini-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* border: 2px solid red; */
+}
+
+.main-s2__mini-card:hover {
+    cursor: pointer;
+}
+
+.main-s2__mini-card:hover .card__city{
+    cursor: pointer;
+    color: var(--text-hover-bg);
+    text-decoration: underline;
+}
+
+.card__city {
+    font-weight: 500;
+    margin-bottom: var(--10px);
+}
+
+.card__name a, .card__city {
+    text-decoration: none;
+    color: black;
+}
+
+.card__name a:hover {
+    color: var(--text-hover-bg);
+    border-bottom: var(--2px) solid black;
+}
+
+.main-s2__card__heart {
+    width: var(--20px);
+    height: var(--20px);
+}
+
+.main-s2__card__items {
+    color: var(--text-hover-bg);
+}
+/* Main Section 2 End */

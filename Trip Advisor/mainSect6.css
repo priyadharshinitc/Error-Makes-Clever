@@ -1,0 +1,63 @@
+/* Main Section 6 Start */
+.main-s6 {
+    margin: var(--64px) 10rem;
+    padding: var(--10px);
+    width: 1200px;
+    height: 500px;
+    background: var(--light-violet);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.main-s6__biker {
+    width: 450px;
+    height: 450px;
+}
+
+.main-s6__desc {
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-s6__sponsor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--5px);
+    margin-bottom: var(--10px);
+}
+
+.trip-advisor-img {
+    width: var(--30px);
+    height: var(--30px);
+}
+
+.main-s6__sponsor__link {
+    color: black;
+}
+
+.main-s6__sponsor__link:hover {
+    cursor: pointer;
+    color: var(--text-hover-bg);
+}
+
+.main-s6__main-description {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.main-s6__main-description h1 {
+    font-weight: 600;
+}
+
+.main-s6__p {
+    margin-bottom: var(--16px);
+}
+/* Main Section 6 End */

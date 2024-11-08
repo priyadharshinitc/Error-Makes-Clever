@@ -1,0 +1,147 @@
+/* Navbar Start */
+nav {
+    padding: var(--10px);
+    margin: var(--16px) auto;
+    padding: 0 10rem;
+    /* border: 2px solid red; */
+}
+
+.main-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--16px);
+    /* border: 2px solid red; */
+}
+
+.navbar-s1 {
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--10px);
+    /* border: 2px solid red; */
+}
+
+.navbar-s1 img {
+    width: var(--48px);
+    height: var(--48px);
+}
+
+.navbar-s1__image:hover, 
+.navbar-s1__title:hover {
+    cursor: pointer;
+}
+
+.navbar-s2 {
+    font-weight: 600;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* border: 2px solid red; */
+}
+
+.navbar-s2 ul {
+    list-style-type: none;
+}
+
+.navbar-s2 ul li {
+    display: inline;
+}
+
+.navbar-s2__list-item {
+    padding: var(--10px);
+    border-radius: var(--30px);
+}
+
+.navbar-s2__list-item:hover {
+    background: var(--button-hover-bg);
+    cursor: pointer;
+}
+
+#forum:hover {
+    cursor: pointer;
+    color: var(--text-hover-bg);
+    text-decoration: underline;
+}
+
+.navbar-s3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--5px);
+    /* border: 2px solid red; */
+}
+
+.navbar-s3__language-selector {
+    padding: var(--10px) var(--20px);
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    align-content: space-around;  
+    align-items: center;  
+    gap: var(--5px);
+    border: none;
+    outline: none;
+    /* border: 2px solid red; */
+}
+
+.navbar-s3__language-selector img {
+    width: var(--16px);
+    height: var(--16px);
+}
+
+#bar {
+    color: rgba(0, 0, 0, 0.4);
+    font-size: var(--20px);
+}
+
+.navbar-s3__language-selector span {
+    font-size: var(--16px);
+    font-weight: 600;
+}
+
+.navbar-s3__language-selector:hover {
+    border-radius: var(--30px);
+    background: var(--button-hover-bg);
+    cursor: pointer;
+}
+
+.black-button {
+    padding: var(--10px) var(--20px);
+    border: none;
+    outline: none;
+    background: black;
+    color: white;
+    border-radius: var(--30px);
+    font-family: "Poppins", sans-serif;
+    font-size: var(--16px);
+    font-style: normal;
+    font-weight: 600;
+}
+
+.black-button:hover {
+    cursor: pointer;
+    background: rgb(0, 0, 0, 0.8);
+}
+
+.navbar-s4 {
+    display: none;
+}
+
+.navbar-s4 ul {
+    list-style-type: none;
+    display: flex;
+    gap: var(--20px);
+    font-weight: 600;
+}
+
+.navbar-s4 li {
+    padding-bottom: var(--10px);
+}
+
+.navbar-s4 li:hover {
+    cursor: pointer;
+    border-bottom: var(--2px) solid black;
+}
+/* Navbar End */

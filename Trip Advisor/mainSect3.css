@@ -1,0 +1,75 @@
+/* Main Section 3 Start */
+.main-s3__sub-title {
+    font-weight: 300;
+}
+
+.main-s3__card-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.main-s3__card {
+    width: 275px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+}
+
+.main-s3__card:hover::after {
+    cursor: pointer;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 275px;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.main-s3__card__img-container {
+    position: relative;
+}
+
+.main-s3__card__img {
+    width: 275px;
+    height: 275px;
+    border-radius: var(--10px);
+}
+
+.main-s3__heart-container {
+    width: var(--32px);
+    height: var(--32px);
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: var(--10px);
+    right: var(--10px);
+}
+
+.main-s3__heart-container img {
+    width: var(--20px);
+    height: var(--20px);
+}
+
+.main-s3__card__title {
+    font-size: var(--16px);
+    font-weight: 600;
+    margin-top: var(--5px);
+    margin-bottom: var(--5px);
+}
+
+.main-s3__card__p1 {
+    font-size: var(--13px);
+    color: var(--text-hover-bg);
+}
+
+.main-s3__card__p2 {
+    font-size: var(--13px);
+    font-weight: 600;
+}
+/* Main Section 3 End */

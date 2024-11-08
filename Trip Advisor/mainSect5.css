@@ -1,0 +1,16 @@
+/* Main Section 5 Start */
+.main-s5__title {
+    font-size: var(--30px);
+    font-weight: bold;
+}
+
+.main-s5__sub-title, 
+.main-s5__sub-title1 {
+    font-size: var(--24px);
+    font-weight: 600;
+}
+
+.main-s5__sub-title1 {
+    margin-top: var(--48px);
+}
+/* Main Section 5 End */

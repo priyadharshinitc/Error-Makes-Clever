@@ -25,7 +25,7 @@
 
 body {
     background: var(--primary-color);
-    font-family: "Roboto", sans-serif;
+    font-family: "Poppins", sans-serif;
     font-style: normal;
     padding: 0 10rem;
 }
@@ -145,7 +145,7 @@ nav {
     background: black;
     color: white;
     border-radius: var(--30px);
-    font-family: "Roboto", sans-serif;
+    font-family: "Poppins", sans-serif;
     font-size: var(--16px);
     font-style: normal;
     font-weight: bold;
@@ -268,7 +268,7 @@ nav {
 .ai-beta {
     margin: var(--48px) auto;
     width: 100%;
-    height: 80vh;
+    height: 70%;
     position: relative;
 }
 
@@ -302,8 +302,9 @@ nav {
 
 .ai-beta__textarea__title {
     font-size: var(--48px);
-    font-weight: 900;
+    font-weight: 800;
     line-height: 1.5cm;
+    margin-top: var(--5px);
 }
 
 .ai-beta__textarea__p2 {
@@ -327,3 +328,51 @@ nav {
     background: rgb(195, 147, 253);
 }
 /* AI Beta Section End */
+
+/* Main Section 1 Start */
+.main-s1__title, 
+.main-s1__sub-title {
+    margin-bottom: var(--10px);
+}
+
+.main-s1__img-container {
+    margin-top: var(--16px);
+    display: flex;
+    justify-content: space-between;
+}
+
+.main-s1__img-container__img {
+    width: 275px;
+    height: 275px;
+    border-radius: var(--10px);
+    position: relative;
+}
+
+.main-s1__img-container__img img {
+    width: 275px;
+    height: 275px;
+    border-radius: var(--10px);
+}
+
+.main-s1__img-container__img::before {
+    width: 275px;
+    height: 275px;
+    border-radius: var(--10px);
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.014);
+    background-image: linear-gradient(0deg, rgba(18, 18, 18, 0.75) 8%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0) 100%);
+    z-index: 1;
+}
+
+.main-s1__img-container__img h2 {
+    position: absolute;
+    left: var(--10px);
+    bottom: var(--10px);    
+    color: white;
+    z-index: 1;
+}
+
+/* Main Section 1 End */

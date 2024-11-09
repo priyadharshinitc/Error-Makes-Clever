@@ -1,4 +1,8 @@
 /* Main Section 5 Start */
+.main-s5__img-container {
+    position: relative;
+}
+
 .main-s5__title {
     font-size: var(--30px);
     font-weight: bold;

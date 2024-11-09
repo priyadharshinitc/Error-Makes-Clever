@@ -27,20 +27,27 @@
     flex-wrap: wrap;
     justify-content: space-between;
     position: relative;
+    /* border: 2px solid red; */
 }
 
 .arrow-container {
     background: white;
+    width: var(--40px);
+    height: var(--40px);
     position: absolute;
     top: 50%;
-    right: 5%;
-    transform: translate(-50%, -50%);
+    right: -2%;
+    transform: translate(0%, -50%);
     border-radius: 50%;
 }
 
 .right-arrow {
     width: var(--40px);
     height: var(--40px);
+}
+
+.right-arrow:hover {
+    cursor: pointer;
 }
 
 .main-s1__img-container__img {

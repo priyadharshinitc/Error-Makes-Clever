@@ -1,8 +1,11 @@
 /* Navbar Start */
 nav {
-    padding: var(--10px);
-    margin: var(--16px) auto;
-    padding: 0 10rem;
+    padding: var(--16px) 10rem;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    background: var(--primary-color);
     /* border: 2px solid red; */
 }
 

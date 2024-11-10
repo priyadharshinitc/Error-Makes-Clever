@@ -55,7 +55,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    /* animation: popup 1s linear infinite; */
+    animation: popup 1s linear infinite;
 }
 
 @keyframes popup {

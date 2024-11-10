@@ -1,8 +1,12 @@
 /* Media Queries Start */
 @media screen and (min-width: 320px) {
-    nav {
+    /* Navbar Start */
+    .main-nav {
         margin-left: var(--24px);
         margin-right: var(--24px);
+        padding-top: var(--20px);
+        padding-bottom: var(--20px);
+        /* background: white; */
     }
 
     .navbar-s2, .navbar-s3 {
@@ -34,7 +38,9 @@
     .main-nav {
         margin-bottom: var(--32px);
     }
+    /* Navbar End */
 
+    /* Search Start */
     .where-to {
         margin-left: var(--24px);
         margin-right: var(--24px);
@@ -67,8 +73,50 @@
         padding-bottom: var(--16px);
         width: 100%;
     }
+    /* Search End */
     
-    .ai-beta, 
+    /* AI Beta Section Start */
+    .ai-beta {
+        margin: var(--48px) auto;
+        width: 100vw;
+        height: 100vh;
+        background: black;
+        background-image: url('https://static.tacdn.com/img2/trips/home-gai-entry-gateway-mv.jpg');
+        background-repeat: no-repeat;
+        background-position: top;
+        background-size: cover;
+        /* border: 2px solid red; */
+    }
+
+    .ai-beta img {
+        display: none;
+    }
+
+    .ai-beta__textarea {
+        width: 85%;
+        text-align: center;
+        position: absolute;
+        top: 5%;
+        left: 8%;
+        z-index: 1;
+        /* border: 2px solid red; */
+    }
+
+    .ai-beta__textarea__title {
+        font-size: var(--32px);
+        line-height: 1cm;
+        margin-top: var(--10px);
+    }
+
+    .ai-beta__textarea__p2 {
+        font-size: var(--16px);
+        font-weight: 500;
+    }
+
+    .ai-beta__button {
+        margin: var(--16px) auto;
+    }
+    /* AI Beta Section End */
     .main-s1, 
     .main-s2, 
     .main-s3, 

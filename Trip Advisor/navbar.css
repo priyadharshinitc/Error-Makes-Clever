@@ -1,6 +1,5 @@
 /* Navbar Start */
 nav {
-    margin: var(--16px) 10rem;
     position: sticky;
     top: 0;
     left: 0;
@@ -10,6 +9,7 @@ nav {
 }
 
 .main-nav {
+    margin: var(--16px) 10rem;    
     display: flex;
     justify-content: space-between;
     align-items: center;

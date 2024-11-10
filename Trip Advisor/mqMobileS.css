@@ -126,7 +126,8 @@
     .main-s5, 
     .main-s7, 
     .footer {
-        margin: 0 var(--24px);
+        margin-left: var(--24px);
+        margin-right: var(--24px);
     }
 
     .main-s1__title, 
@@ -163,7 +164,30 @@
     }
     /* Main Section 1 End */
      
-    .main-s2,
+    /* Main Section 2 Start */
+    .main-s2__card-container {
+        height: auto;
+        overflow-x: auto;
+        overflow-y: hidden;
+        white-space: nowrap;        
+    }
+
+    .main-s2__card__img, 
+    .main-s2__img-container:hover::after {
+        width: 225px;
+        height: 145px;
+    }
+
+    .card__city {
+        width: 80%;        
+    }
+
+    .card__city p {
+        text-align: center;
+        text-wrap: wrap;
+    }    
+    /* Main Section 2 End */
+    
     .main-s3, 
     .main-s4, 
     .main-s5, 

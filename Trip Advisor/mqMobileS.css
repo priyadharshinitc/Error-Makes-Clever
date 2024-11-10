@@ -253,13 +253,58 @@
     /* Main Section 5 End */
 
     /* Main Section 6 Start */
+    .main-s6 {
+        margin: var(--48px) 0;
+        padding: var(--24px);
+        width: 320px;
+        height: 590px;
+        display: block;
+        /* flex-direction: column;
+        justify-content: space-around;
+        align-items: flex-start; */
+        position: relative;
+    }    
+
+    .main-s6__biker {
+        width: 270px;
+        height: 270px;
+        position: absolute;
+        top: var(--64px);
+        left: var(--20px);
+    }
+
+    .main-s6__desc {
+        width: 270px;
+        display: block;
+    }
+
+    .main-s6__main-description {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        text-align: left;
+        position: absolute;
+        top: 55%;
+        left: 5%;
+    }
+
+    .main-s6__main-description h1 {
+        margin-top: var(--16px);
+    }
+
+    .main-s6__sponsor {
+        position: absolute;
+        top: var(--20px);
+        left: var(--20px);
+    }
+
     /* Main Section 6 End */
     /* Main Section 7 Start */
     /* Main Section 7 End */
     /* Footer Start */
     /* Footer End */
-     
-    .main-s6,
+    
     .main-s7,  
     .footer {
         display: none;

@@ -132,16 +132,14 @@
 
     .main-s1__title, 
     .main-s2__title, 
-    .main-s3__title, 
-    .main-s5__title {
+    .main-s3__title {
         font-size: var(--20px);
         font-weight: 600;
     }
 
     .main-s1__sub-title, 
     .main-s2__sub-title, 
-    .main-s3__sub-title,
-    .main-s5__sub-title {
+    .main-s3__sub-title {
         font-weight: normal;
     }
 
@@ -209,6 +207,7 @@
         overflow-x: auto;
         white-space: nowrap;
     }
+
     .main-s4__img-container:hover::after, 
     .main-s4__img-container > img {
         width: 225px;
@@ -224,16 +223,42 @@
         text-decoration: underline;
     }
     /* Main Section 4 End */
+
     /* Main Section 5 Start */
+    .main-s5__title {
+        font-size: var(--28px);
+    }
+
+    .main-s5__img-container {
+        overflow-x: auto;
+        overflow-y: hidden;
+        white-space: nowrap;
+    }
+
+    .main-s5__img-container__a {
+        width: 180px;
+        height: 190px;
+    }
+     
+    .main-s5__img-container__a img, 
+    .main-s5__img-container__a::before {
+        width: 180px;
+        height: 180px;
+    }
+
+    .main-s5__img-container__a h2 {
+        font-size: var(--16px);
+        text-wrap: wrap;
+    }
     /* Main Section 5 End */
+
     /* Main Section 6 Start */
     /* Main Section 6 End */
     /* Main Section 7 Start */
     /* Main Section 7 End */
     /* Footer Start */
     /* Footer End */
-    
-    .main-s5, 
+     
     .main-s6,
     .main-s7,  
     .footer {

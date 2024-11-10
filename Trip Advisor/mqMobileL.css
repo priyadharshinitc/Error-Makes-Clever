@@ -1,0 +1,69 @@
+/* Media Queries Start */
+@media screen and (min-width: 425px) {
+    /* Main Section 1 Start */
+    .main-s1__img-container__a, 
+    .main-s1__img-container__a img, 
+    .main-s1__img-container__a::before {
+        width: 250px;
+        height: 250px;
+    }
+    /* Main Section 1 End */
+
+    /* Main Section 2 Start */
+    .main-s2__card__img, 
+    .main-s2__img-container:hover::after {
+        width: 310px;
+        height: 200px;
+    }
+    /* Main Section 2 End */
+
+    /* Main Section 3 Start */
+    .main-s3__card__img {
+        width: 250px;
+        height: 250px;
+    }
+
+    .main-s3__card:hover::after {
+        width: 250px;
+    }
+    /* Main Section 3 End */
+
+    /* Main Section 4 Start */
+    .main-s4__img-container:hover::after, 
+    .main-s4__img-container > img {
+        width: 310px;
+        height: 200px;
+    }
+    /* Main Section 4 End */
+
+    /* Main Section 5 Start */
+    .main-s5__img-container__a {
+        width: 250px;
+        height: auto;
+    }
+
+    .main-s5__img-container__a img, 
+    .main-s5__img-container__a::before {
+        width: 250px;
+        height: 250px;
+    }
+    /* Main Section 5 End */
+
+    /* Main Section 6 Start */
+    .main-s6 {
+        height: 650px;
+    }
+
+    .main-s6__biker {
+        width: 380px;
+        height: 375px;
+    }
+
+    .main-s6__main-description {
+        position: absolute;
+        top: 70%;
+        left: 5%;
+    }
+    /* Main Section 6 Start */
+}
+/* Media Queries End */

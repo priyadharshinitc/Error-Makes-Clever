@@ -205,7 +205,24 @@
     /* Main Section 3 End */
 
     /* Main Section 4 Start */
+    .main-s4__card-container {
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+    .main-s4__img-container:hover::after, 
+    .main-s4__img-container > img {
+        width: 225px;
+        height: 145px;
+    }
 
+    .main-s4__card a {
+        text-decoration: none;
+        text-wrap: wrap;
+    }
+
+    .main-s4__card a:hover {
+        text-decoration: underline;
+    }
     /* Main Section 4 End */
     /* Main Section 5 Start */
     /* Main Section 5 End */
@@ -216,7 +233,6 @@
     /* Footer Start */
     /* Footer End */
     
-    .main-s4,
     .main-s5, 
     .main-s6,
     .main-s7,  

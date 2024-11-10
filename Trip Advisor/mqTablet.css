@@ -87,7 +87,7 @@
         margin: var(--48px) auto;
         width: 720px;
         height: auto;
-        background-color: none;
+        background-color: transparent;
         background-image: none;
         background-position: center;
         background-size: cover;

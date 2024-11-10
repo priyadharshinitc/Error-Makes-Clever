@@ -1,6 +1,6 @@
 /* Navbar Start */
 nav {
-    padding: var(--16px) 10rem;
+    margin: var(--16px) 10rem;
     position: sticky;
     top: 0;
     left: 0;
@@ -15,6 +15,16 @@ nav {
     align-items: center;
     margin-bottom: var(--16px);
     /* border: 2px solid red; */
+}
+
+.navbar-s0 svg, .navbar-s5 svg {
+    width: var(--24px);
+    height: var(--24px);
+    display: none;
+}
+
+.navbar-s6 {
+    display: none;
 }
 
 .navbar-s1 {

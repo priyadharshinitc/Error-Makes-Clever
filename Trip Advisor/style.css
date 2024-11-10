@@ -13,6 +13,7 @@
     --light-violet: #DFD3EE;
     --dark-violet: rgb(195, 147, 253);
     --light-gray: rgba(163, 163, 163, 0.053);
+    --1px: 0.0625rem;
     --2px: 0.125rem;
     --5px: 0.3125rem;
     --10px: 0.625rem;

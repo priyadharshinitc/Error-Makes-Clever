@@ -1,0 +1,93 @@
+/* Media Queries Start */
+@media screen and (min-width: 320px) {
+    nav {
+        margin-left: var(--24px);
+        margin-right: var(--24px);
+    }
+
+    .navbar-s2, .navbar-s3 {
+        display: none;
+    }
+
+    .navbar-s0 svg, .navbar-s5 svg {
+        display: block;
+    }
+
+    /* .navbar-s6 {
+        display: block;
+        width: 100vw;
+    }
+
+    .navbar-s6 .where-to__list {
+        display: inline;
+    } */
+
+    .navbar-s1 img {
+        width: var(--30px);
+        height: var(--30px);
+    }
+
+    .navbar-s1__title {
+        font-size: var(--20px);
+    }
+
+    .main-nav {
+        margin-bottom: var(--32px);
+    }
+
+    .where-to {
+        margin-left: var(--24px);
+        margin-right: var(--24px);
+    }
+
+    .where-to h1, .where-to__list {
+        display: none;
+    }
+
+    .search-bar {
+        padding: var(--10px);
+        width: 100%;
+        border-radius: var(--10px);
+        box-shadow: 0px 0px 3px 1px rgb(0, 0, 0, 0.5);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+    
+    .search-bar__s1 {
+        width: 90%;
+        border-bottom: var(--1px) solid black;
+    }
+
+    .search-bar__button {
+        margin-top: var(--20px);
+        margin-bottom: var(--20px);
+        padding-top: var(--16px);
+        padding-bottom: var(--16px);
+        width: 100%;
+    }
+    
+    .ai-beta, 
+    .main-s1, 
+    .main-s2, 
+    .main-s3, 
+    .main-s4, 
+    .main-s5, 
+    .main-s6,
+    .main-s7,  
+    .footer {
+        display: none;
+    }
+}
+/* Media Queries End */
+
+/* .main-s1, 
+    .main-s2, 
+    .main-s3, 
+    .main-s4, 
+    .main-s5, 
+    .main-s7, 
+    .footer {
+        padding: 0 10rem;
+    } */

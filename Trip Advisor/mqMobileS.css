@@ -117,8 +117,53 @@
         margin: var(--16px) auto;
     }
     /* AI Beta Section End */
+
+    /* Main Section 1 Start */
     .main-s1, 
     .main-s2, 
+    .main-s3, 
+    .main-s4, 
+    .main-s5, 
+    .main-s7, 
+    .footer {
+        margin: 0 var(--24px);
+    }
+
+    .main-s1__title, 
+    .main-s2__title, 
+    .main-s3__title, 
+    .main-s5__title {
+        font-size: var(--20px);
+        font-weight: 600;
+    }
+
+    .main-s1__sub-title, 
+    .main-s2__sub-title, 
+    .main-s3__sub-title,
+    .main-s5__sub-title {
+        font-weight: normal;
+    }
+
+    .main-s1__img-container {
+        height: 190px;
+        overflow-x: auto;
+        /* overflow-y: hidden; */
+        white-space: nowrap;
+    }
+
+    .main-s1__img-container__a, 
+    .main-s1__img-container__a img, 
+    .main-s1__img-container__a::before {
+        width: 180px;
+        height: 180px;
+    }
+
+    .arrow-container {
+        display: none;
+    }
+    /* Main Section 1 End */
+     
+    .main-s2,
     .main-s3, 
     .main-s4, 
     .main-s5, 

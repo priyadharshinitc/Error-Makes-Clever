@@ -187,8 +187,23 @@
         text-wrap: wrap;
     }    
     /* Main Section 2 End */
-    
-    .main-s3, 
+
+    /* Main Section 3 Start */
+    .main-s3__card-container {
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    .main-s3__card__img {
+        width: 180px;
+        height: 180px;
+    }
+
+    .main-s3__card__title {
+        text-wrap: wrap;
+    }
+    /* Main Section 3 End */
+
     .main-s4, 
     .main-s5, 
     .main-s6,

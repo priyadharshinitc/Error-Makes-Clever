@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+
+    <!-- Tailwind CSS CDN Link -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Responsive Navbar -->
+    <nav class="bg-green-100 p-3 flex items-center justify-between shadow-xl sticky top-0 z-10">
+        <h1 class="text-2xl">Greenden</h1>
+
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 w-6 h-6 md:hidden">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+        </svg>
+          
+        <ul class="text-gray-600 hidden md:flex gap-5">
+            <li>
+                <a class="hover:underline hover:text-black" href="index.html">Home</a>
+            </li>
+            <li>
+                <a class="hover:underline hover:text-black" href="products.html">Products</a>
+            </li>
+            <li>
+                <a class="hover:underline hover:text-black" href="contact.html">Contact</a>
+            </li>
+        </ul>        
+    </nav>
+
+    <!-- Our Products -->
+    <section class="p-4 text-center mt-10">
+        <h1 class="text-3xl font-bold">Our Products</h1>
+        <input type="text" class="border border-black w-4/5 mt-5 p-3" placeholder="Search for a Product...">
+
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-5 mt-10">
+            <div class="cursor-pointer">
+                <img src="./Images/Product 1.png" alt="Snake Plant" class="inline hover:shadow-xl transform hover:-translate-y-2">
+                <p class="mt-2">Snake Plant</p>
+                <p>Rs. 150</p>
+            </div>
+
+            <div class="cursor-pointer">
+                <img src="./Images/Best Seller 1.png" alt="Rose Plant" class="inline hover:shadow-xl transform hover:-translate-y-2">
+                <p class="mt-2">Rose Plant</p>
+                <p>Rs. 200</p>
+            </div>
+
+            <div class="cursor-pointer">
+                <img src="./Images/Product 2.png" alt="Green Plant" class="inline hover:shadow-xl transform hover:-translate-y-2">
+                <p class="mt-2">Green Plant</p>
+                <p>Rs. 150</p>
+            </div>
+
+            <div class="cursor-pointer">
+                <img src="./Images/Best Seller 2.jpg" alt="Big Leaf Plant" class="inline hover:shadow-xl transform hover:-translate-y-2">
+                <p class="mt-2">Big Leaf Plant</p>
+                <p>Rs. 160</p>
+            </div>
+
+            <div class="cursor-pointer">
+                <img src="./Images/Product 3.png" alt="Croton Plant" class="inline hover:shadow-xl transform hover:-translate-y-2">
+                <p class="mt-2">Croton Plant</p>
+                <p>Rs. 250</p>
+            </div>
+
+            <div class="cursor-pointer">
+                <img src="./Images/Best Seller 3.jpg" alt="Small Snake Plant" class="inline hover:shadow-xl transform hover:-translate-y-2">
+                <p class="mt-2">Small Snake Plant</p>
+                <p>Rs. 150</p>
+            </div>
+
+            <div class="cursor-pointer">
+                <img src="./Images/Product 4.png" alt="Big Leaf Croton Plant" class="inline hover:shadow-xl transform hover:-translate-y-2">
+                <p class="mt-2">Big Leaf Croton Plant</p>
+                <p>Rs. 150</p>
+            </div>
+
+            <div class="cursor-pointer">
+                <img src="./Images/Best Seller 4.png" alt="Yellow Flower Plant" class="inline hover:shadow-xl transform hover:-translate-y-2">
+                <p class="mt-2">Yellow Flower Plant</p>
+                <p>Rs. 140</p>
+            </div>
+        </div>
+    </section>
+
+     <!-- Footer -->
+    <section class="bg-green-100 p-10 flex flex-col gap-5 mt-5">
+        <h1 class="text-4xl font-bold">Greenden</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, maiores.</p>
+        <p>@ 2024 greenden.com</p>
+    </section>
+</body>
+</html>

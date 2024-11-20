@@ -15,7 +15,7 @@
     <nav class="bg-green-100 p-3 flex items-center justify-between shadow-xl sticky top-0 z-10">
         <h1 class="text-2xl">Greenden</h1>
 
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 w-6 h-6 md:hidden">
+        <svg id="menuicon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 w-6 h-6 md:hidden">
             <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
         </svg>
           
@@ -31,6 +31,24 @@
             </li>
         </ul>        
     </nav>
+
+    <!-- Side Navbar -->
+    <section id="sidenavbar" class="bg-green-100 w-1/2 h-screen fixed top-0 -right-1/2 z-20 transition-all duration-1000">
+        <div id="closeicon" class="p-5 text-right" >
+            <p class="cursor-pointer">X</p>
+        </div>
+        <ul class="text-gray-600 flex flex-col gap-10 items-center">
+            <li>
+                <a class="hover:underline hover:text-black" href="index.html">Home</a>
+            </li>
+            <li>
+                <a class="hover:underline hover:text-black" href="products.html">Products</a>
+            </li>
+            <li>
+                <a class="hover:underline hover:text-black" href="contact.html">Contact</a>
+            </li>
+        </ul>
+    </section>
     
     <!-- Header Section -->
     <section class="bg-green-100 p-4 md:p-20 flex justify-center">
@@ -93,20 +111,20 @@
             </div>
 
             <div class="cursor-pointer">
-                <img class="inline hover:shadow-xl transform hover:-translate-y-2" src="./Images/Best Seller 2.jpg" alt="Big Leaf Plant">
-                <h1 class="mt-2">Big Leaf Plant</h1>
+                <img class="inline hover:shadow-xl transform hover:-translate-y-2" src="./Images/Best Seller 2.jpg" alt="Swiss Cheese Plant">
+                <h1 class="mt-2">Swiss Cheese Plant</h1>
                 <p>Rs. 160</p>
             </div>
 
             <div class="cursor-pointer">
-                <img class="inline hover:shadow-xl transform hover:-translate-y-2" src="./Images/Best Seller 3.jpg" alt="Small Snake Plant">
-                <h1 class="mt-2">Small Snake Plant</h1>
+                <img class="inline hover:shadow-xl transform hover:-translate-y-2" src="./Images/Best Seller 3.jpg" alt="Golden Hahnii Snake Plant">
+                <h1 class="mt-2">Golden Hahnii Snake Plant</h1>
                 <p>Rs. 150</p>
             </div>
 
             <div class="cursor-pointer">
-                <img class="inline hover:shadow-xl transform hover:-translate-y-2" src="./Images/Best Seller 4.png" alt="Yellow Flower Plant">
-                <h1 class="mt-2">Yellow Flower Plant</h1>
+                <img class="inline hover:shadow-xl transform hover:-translate-y-2" src="./Images/Best Seller 4.png" alt="Buttercup Plant">
+                <h1 class="mt-2">Buttercup Plant</h1>
                 <p>Rs. 140</p>
             </div>
         </div>
@@ -156,5 +174,7 @@
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, maiores.</p>
         <p>@ 2024 greenden.com</p>
     </section>
+
+    <script src="script.js"></script>
 </body>
 </html>

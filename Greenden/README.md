@@ -1,6 +1,6 @@
-# Greenden: A Plant Paradise Website (HTML & Tailwind CSS)
+# Greenden: A Dynamic Plant Paradise Website (HTML, Tailwind CSS, JavaScript)
 
-Greenden is a fully responsive e-commerce static website for a plant nursery, built using HTML and Tailwind CSS.
+Greenden is a fully responsive e-commerce website for a plant nursery, built using HTML, Tailwind CSS and JavaScript.
 
 ## Features
 
@@ -9,11 +9,13 @@ Greenden is a fully responsive e-commerce static website for a plant nursery, bu
 * **Flexbox & Grid Layout:** Utilizes flexbox and grid for a well-organized and modern design.
 * **Three Pages:** Includes three main pages: Home, Products, and Contact.
 * **Product Hover Effect:** Plant images on the home, products page have a subtle hover effect that includes a slight upward movement and a shadow.
+* **Functional Search:** Real-time filtering of products based on search input.
 
 ## Tech Stack
 
 * **HTML:** Provides the structure and content for the website.
 * **Tailwind CSS:** Used for styling the visual elements and creating the layout.
+* **JavaScript:** For dynamic features like the side navbar for mobile devices and search functionality.
 * **Flexbox:** Offers a flexible box model for creating dynamic and responsive layouts.
 * **Grid:** Provides a more structured layout system for precise control over the page structure.
 
@@ -27,7 +29,7 @@ If you would like to contribute or suggest improvements, please feel free to ope
 
 ## Future Enhancements
 This project serves as a foundation for a fully functional Greenden website.  Future development can include:
-* Adding new features (e.g., plant care information, search functionality).
+* Adding new features (e.g., plant care information, user authentication).
 * Improving the existing design.
 * Implementing a shopping cart and checkout system.
   

@@ -1,0 +1,54 @@
+h1, #formDetails, #table {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+table, th, td {
+    border: 1px solid #000;
+}
+
+table {
+    padding: 5px;
+}
+
+input, select, button {
+    border: none;
+    outline: none;
+}
+
+button {
+    /* width: 225px; */
+    width: 100%;
+    background-color: #fff;
+    cursor: pointer;
+        
+    &:hover {
+        background-color: rgb(144, 238, 191);
+    }
+}
+
+#table {
+    width: fit-content;
+    margin: 50px auto;
+}
+
+#table {
+    padding: 0;
+}
+
+#table th, #table td {
+    padding: 5px;
+}
+
+.deleteBtn {
+    background-color: red;
+    color: white;
+    width: 60px;
+    padding: 2px 5px;
+    cursor: pointer;
+
+    &:hover {
+        background-color: red;
+    }
+}

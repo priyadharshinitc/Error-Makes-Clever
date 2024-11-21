@@ -8,9 +8,9 @@ Greenden is a fully responsive e-commerce website for a plant nursery, built usi
 * **Elegant Layout:** Utilizes flexbox and grid for a well-organized and modern design.
 * **Three Pages:** Includes three main pages: Home, Products, and Contact.
 * **Engaging User Experience:**
-  * Subtle hover effects on plant images.
   * Dynamic side navbar for mobile devices.
   * Interactive video popup with a close button for a seamless viewing experience.
+  * Subtle hover effects on plant images.
 * **Functional Search:** Real-time filtering of products based on search input.
 
 ## Tech Stack

@@ -1,0 +1,57 @@
+/* Resets */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --white: #FFF;
+    --light-blue: #48CFCB;
+    --dark-cyan: #229799;
+    --black: #1D232C;
+    --1px: 0.0625rem;
+    --2px: 0.125rem;
+    --5px: 0.3125rem;
+    --10px: 0.625rem;
+    --13px: 0.8125rem;
+    --16px: 1rem;
+    --20px: 1.25rem;
+    --24px: 1.5rem;
+	--28px: 1.75rem;
+    --30px: 1.875rem;
+    --32px: 2rem;
+    --40px: 2.5rem;
+    --48px: 3rem;
+    --n200px: -12.5rem;
+}
+
+/* 
+.nunito-<uniquifier> {
+  font-family: "Nunito", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+*/
+
+body {
+    font-family: "Nunito", sans-serif;
+}
+
+.btn {
+    padding: var(--10px) var(--20px);
+}
+
+.btn:hover {
+    cursor: pointer;
+}
+
+/* 
+z-index Info:
+.slider::after - 1
+#sliderLeftArrow - 2
+#sliderRightArrow - 2
+.navbar - 3
+.sideNavbarContainer - 10
+*/

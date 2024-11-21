@@ -1,8 +1,8 @@
 // Main Navbar Close Functionality
-let navCloseIcon = document.getElementById("navCloseIcon");
-let offerBanner = document.querySelector(".offer-banner");
+let offerCloseIcon = document.getElementById("offerCloseIcon");
+let offerBanner = document.querySelector(".offerBanner");
 
-navCloseIcon.addEventListener("click", function() {
+offerCloseIcon.addEventListener("click", function() {
     offerBanner.style.display = "none";
 });
 
@@ -17,4 +17,19 @@ menubar.addEventListener("click", function() {
 
 sideNavbar__close.addEventListener("click", function() {
     sideNavbarContainer.style.left = "var(--n200px)";
+});
+
+// Image Slider Functionality
+let sliderImgContainer = document.querySelector(".slider__imgContainer");
+let sliderLeftArrow = document.getElementById("sliderLeftArrow");
+let sliderRightArrow = document.getElementById("sliderRightArrow");
+
+sliderLeftArrow.addEventListener("click", function() {
+    sliderImgContainer.style.scrollBehavior = "smooth";
+    sliderImgContainer.scrollLeft -= 300; 
+});
+
+sliderRightArrow.addEventListener("click", function() {
+    sliderImgContainer.style.scrollBehavior = "smooth";
+    sliderImgContainer.scrollLeft += 300; 
 });

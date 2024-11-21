@@ -1,44 +1,5 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-:root {
-    --white: #F5F5F5;
-    --light-blue: #48CFCB;
-    --dark-cyan: #229799;
-    --black: #1D232C;
-    --1px: 0.0625rem;
-    --2px: 0.125rem;
-    --5px: 0.3125rem;
-    --10px: 0.625rem;
-    --13px: 0.8125rem;
-    --16px: 1rem;
-    --20px: 1.25rem;
-    --24px: 1.5rem;
-	--28px: 1.75rem;
-    --30px: 1.875rem;
-    --32px: 2rem;
-    --40px: 2.5rem;
-    --48px: 3rem;
-    --n200px: -12.5rem;
-}
-
-/* 
-.nunito-<uniquifier> {
-  font-family: "Nunito", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: <weight>;
-  font-style: normal;
-}
-*/
-
-body {
-    font-family: "Nunito", sans-serif;
-}
-
-.offer-banner {
+/* Offer Banner */
+.offerBanner {
     padding: var(--10px);
     background: var(--black);
     color: var(--white);
@@ -48,8 +9,7 @@ body {
     gap: var(--20px);
 }
 
-.close-icon {
-    font-family: "Nunito", sans-serif;
+#offerCloseIcon {
     padding: var(--5px);
     background: var(--black);
     color: var(--white);
@@ -59,18 +19,23 @@ body {
     cursor: pointer;
 }
 
+/* Navigation */
 .navbar {
-    padding: var(--20px);
+    padding: var(--10px) var(--20px);
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 3;
+    background: var(--white);
 }
 
-.navbar__header {
+.navbar__title {
     font-weight: bolder;
 }
 
-.navbar {
+.navList {
     list-style-type: none;
 }
 
@@ -95,11 +60,18 @@ body {
     color: var(--white);
     width: 60%;
     height: 100vh;
-    z-index: 1;
+    z-index: 10;
     position: fixed;
     top: 0;
     left: var(--n200px);
     transition: all 1s ease-in-out;
+    /* display: none; */
+}
+
+#sideNavbar__close {
+    padding: var(--20px);
+    text-align: right;
+    font-weight: bold;
 }
 
 .sideNavList {
@@ -117,10 +89,4 @@ body {
     color: var(--white);
     text-decoration: none;
     font-size: var(--16px);    
-}
-
-#sideNavbar__close {
-    padding: var(--20px);
-    text-align: right;
-    font-weight: bold;
 }

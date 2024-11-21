@@ -22,6 +22,7 @@
 /* Navigation */
 .navbar {
     padding: var(--10px) var(--20px);
+    padding-top: var(--16px);
     display: flex;
     justify-content: space-between;
     align-items: center;

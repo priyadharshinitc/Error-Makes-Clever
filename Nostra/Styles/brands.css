@@ -1,0 +1,60 @@
+/* Brands */
+.brands {
+    padding: var(--16px) var(--20px);
+}
+
+.brandsLogoContainer {
+    margin-top: var(--10px);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    gap: var(--10px);
+}
+
+.brandLogo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.brandLogo img {
+    width: var(--24px);
+    height: var(--24px);
+}
+
+.brandLogo p {
+    font-size: var(--16px);
+    margin-top: var(--5px);
+}
+
+.customerService {
+    margin-top: var(--16px);
+}
+
+.customerService__Title {
+    display: flex;
+    flex-direction: column;
+    gap: var(--10px);
+}
+
+.serviceCardContainer {
+    width: 100%;
+    margin-top: var(--16px);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    gap: var(--16px);
+}
+
+.serviceCard {
+    background: var(--light-gray);
+    padding: var(--13px);
+    border-radius: var(--10px);
+}
+
+.serviceCard__Title {
+    margin-top: var(--10px);
+}

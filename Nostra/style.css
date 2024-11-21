@@ -1,0 +1,126 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --white: #F5F5F5;
+    --light-blue: #48CFCB;
+    --dark-cyan: #229799;
+    --black: #1D232C;
+    --1px: 0.0625rem;
+    --2px: 0.125rem;
+    --5px: 0.3125rem;
+    --10px: 0.625rem;
+    --13px: 0.8125rem;
+    --16px: 1rem;
+    --20px: 1.25rem;
+    --24px: 1.5rem;
+	--28px: 1.75rem;
+    --30px: 1.875rem;
+    --32px: 2rem;
+    --40px: 2.5rem;
+    --48px: 3rem;
+    --n200px: -12.5rem;
+}
+
+/* 
+.nunito-<uniquifier> {
+  font-family: "Nunito", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+*/
+
+body {
+    font-family: "Nunito", sans-serif;
+}
+
+.offer-banner {
+    padding: var(--10px);
+    background: var(--black);
+    color: var(--white);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: var(--20px);
+}
+
+.close-icon {
+    font-family: "Nunito", sans-serif;
+    padding: var(--5px);
+    background: var(--black);
+    color: var(--white);
+    font-weight: bold;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.navbar {
+    padding: var(--20px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar__header {
+    font-weight: bolder;
+}
+
+.navbar {
+    list-style-type: none;
+}
+
+.navList li {
+    display: none;
+    margin-right: var(--20px);
+}
+
+.navbar li a {
+    color: var(--black);
+    text-decoration: none;
+    font-size: var(--20px);
+}
+
+#menubar {
+    width: var(--24px);
+    height: var(--24px);
+}
+
+.sideNavbarContainer {
+    background: var(--black);
+    color: var(--white);
+    width: 60%;
+    height: 100vh;
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    left: var(--n200px);
+    transition: all 1s ease-in-out;
+}
+
+.sideNavList {
+    width: 80%;
+    height: 50%;
+    padding-left: var(--20px);
+    list-style-type: none;
+}
+
+.sideNavList li {
+    padding-bottom: var(--20px);
+}
+
+.sideNavList li a {
+    color: var(--white);
+    text-decoration: none;
+    font-size: var(--16px);    
+}
+
+#sideNavbar__close {
+    padding: var(--20px);
+    text-align: right;
+    font-weight: bold;
+}

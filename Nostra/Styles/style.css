@@ -11,6 +11,7 @@
     --light-blue: #48CFCB;
     --dark-cyan: #229799;
     --black: #1D232C;
+    --overlayBlack: rgba(0, 0, 0, 0.6);
     --1px: 0.0625rem;
     --2px: 0.125rem;
     --5px: 0.3125rem;
@@ -24,6 +25,7 @@
     --32px: 2rem;
     --40px: 2.5rem;
     --48px: 3rem;
+    --200px: 12.5rem;
     --n200px: -12.5rem;
     --250px: 15.625rem;
 }
@@ -56,4 +58,6 @@ z-index Info:
 #sliderRightArrow - 2
 .navbar - 3
 .sideNavbarContainer - 10
+.newArrivals__product::after - 1
+.shopNowBtn - 2
 */

@@ -21,8 +21,8 @@
 
 /* Navigation */
 .navbar {
-    margin: 0 var(--20px);
-    margin-top: var(--16px);
+    padding: var(--5px) var(--20px);
+    margin-top: var(--16px);    
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -66,7 +66,7 @@
     top: 0;
     left: var(--n200px);
     transition: all 1s ease-in-out;
-    /* display: none; */
+    display: none; /* Remove this after completing the project */
 }
 
 #sideNavbar__close {

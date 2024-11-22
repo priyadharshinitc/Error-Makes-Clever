@@ -35,7 +35,7 @@
     margin-top: var(--16px);
 }
 
-.customerService__Title {
+.customerService__title {
     display: flex;
     flex-direction: column;
     gap: var(--10px);

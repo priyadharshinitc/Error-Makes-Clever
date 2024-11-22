@@ -1,0 +1,36 @@
+/* Limited Offer */
+.limitedOffer {
+    width: 90%;
+    height: auto;
+    margin: 0 auto;
+    margin-top: var(--16px);
+    background: var(--black);
+    color: var(--white);
+    padding: var(--16px);
+}
+
+.limitedOffer img {
+    width: 100%;
+    height: 30%;
+}
+
+#limitedOffer__title {
+    margin-top: var(--16px);
+}
+
+#limitedOffer__subTitle {
+    margin-top: var(--5px);
+    font-size: var(--20px);
+}
+
+.limitedOffer .shopNowBtn {
+    background: var(--white);
+    color: var(--black);
+    position: static;
+    margin-top: var(--16px);
+}
+
+.limitedOffer .shopNowBtn:hover {
+    background: rgba(255, 254, 254, 0.963);
+    font-weight: bold;
+}

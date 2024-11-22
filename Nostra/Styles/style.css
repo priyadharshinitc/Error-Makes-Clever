@@ -6,11 +6,11 @@
 }
 
 :root {
+    --black: #1D232C;
     --white: #FFF;
     --light-gray: #F2F4F7;
     --light-blue: #48CFCB;
-    --dark-cyan: #229799;
-    --black: #1D232C;
+    --dark-cyan: #229799;    
     --overlayBlack: rgba(0, 0, 0, 0.6);
     --1px: 0.0625rem;
     --2px: 0.125rem;

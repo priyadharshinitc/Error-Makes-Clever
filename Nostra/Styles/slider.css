@@ -83,6 +83,14 @@
     text-align: center;
 }
 
+.showNowBtn {
+    border-radius: var(--10px);
+}
+
 .showNowBtn span {
     font-size: var(--16px);
+}
+
+.showNowBtn:hover {
+    font-weight: bold;
 }

@@ -1,5 +1,164 @@
-<!-- https://images.unsplash.com/photo-1483181957632-8bda974cbc91?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
 
-<!-- https://images.unsplash.com/photo-1591085686350-798c0f9faa7f?q=80&w=1931&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D -->
+    <!-- Google Font Link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
 
-<!-- https://images.unsplash.com/photo-1573855619003-97b4799dcd8b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D -->
+    <!-- Font Awesome CDN Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- My Stylesheet -->
+    <link rel="stylesheet" href="./Styles/style.css">
+    <link rel="stylesheet" href="./Styles/contact.css">
+    <link rel="stylesheet" href="./Styles/navigation.css">
+    <link rel="stylesheet" href="./Styles/footer.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <h1 class="navbar__title">Nostra</h1>
+        <ul class="navList">
+            <li>
+                <a href="index.html">Home</a>
+            </li>
+
+            <li>
+                <a href="newArrival">New Arrival</a>
+            </li>
+
+            <li>
+                <a href="mostWanted">Most Wanted</a>
+            </li>
+
+            <li>
+                <a href="collections.html">Collections</a>
+            </li>
+
+            <li>
+                <a href="contact.html">Contact Us</a>
+            </li>
+        </ul>
+
+        <!-- Menubar -->
+        <svg id="menubar" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+        </svg>
+        
+        <!-- Side Navbar -->
+        <section class="sideNavbarContainer">
+            <p id="sideNavbar__close">X</p>
+            <ul class="sideNavList">
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+
+                <li>
+                    <a href="newArrival">New Arrival</a>
+                </li>
+
+                <li>
+                    <a href="mostWanted">Most Wanted</a>
+                </li>
+
+                <li>
+                    <a href="collections.html">Collections</a>
+                </li>
+
+                <li>
+                    <a href="contact.html">Contact Us</a>
+                </li>
+            </ul>
+        </section>
+    </nav>
+
+    <!-- Contact Form -->
+    <section class="contact">
+        <h2 id="contact__title">Contact Us</h2>
+        <p id="contact__subTitle">Got a technical issue? Want to send feedback? Let us know.</p>
+        <form id="contactForm">
+            <div id="contactForm__name">
+                <label for="name">Name</label>
+                <br>
+                <input type="text" id="name" placeholder="Enter your name" autocomplete="off" required>
+            </div>
+
+            <div id="contactForm__email">
+                <label for="email">Your email</label>
+                <br>
+                <input type="email" id="email" placeholder="name@gmail.com" autocomplete="off" required>
+            </div>
+            
+            <div id="contactForm__message">
+                <label for="message">Your message</label>
+                <br>
+                <textarea id="message" rows="6" placeholder="Leave a comment..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn sendMessage">Send Message</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <h1 id="footer__title">Nostra</h1>
+        <p id="footer__subTitle">Experience the future of fashion with Nostra. Explore our range of trendy and timeless pieces. Shop effortlessly and dress impeccably.</p>
+
+        <div class="linkContainer">
+            <div class="footer__one">
+                <h3>Company</h3>
+                <ul>
+                    <a>
+                        <li>About Us</li>
+                    </a>
+                    <a href="collections.html">
+                        <li>Collections</li>
+                    </a>
+                    <a>
+                        <li>Careers</li>
+                    </a>
+                    <a>
+                        <li>Blog</li>
+                    </a>
+                </ul>              
+            </div>
+
+            <div class="footer__two">
+                <h3>Support</h3>
+                <ul>
+                    <a href="contact.html">
+                        <li>Contact Us</li>
+                    </a>
+                    <a>
+                        <li>Help and Support</li>
+                    </a>
+                </ul>               
+            </div>
+        </div>
+
+        <div class="iconContainer">
+            <!-- Twitter -->
+            <i class="fa-brands fa-twitter fa-xl"></i>
+
+            <!-- Facebook -->
+            <i class="fa-brands fa-facebook fa-xl"></i>
+
+            <!-- Instagram -->
+            <i class="fa-brands fa-instagram fa-xl"></i>                
+
+            <!-- Youtube -->
+            <i class="fa-brands fa-youtube fa-xl"></i>
+        </div>
+        
+        <p>&copy; 2024 nostra.com</p>
+        <p>All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

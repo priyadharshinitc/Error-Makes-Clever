@@ -1,0 +1,39 @@
+/* Contact */
+.contact {
+    width: 90%;
+    margin: 0 auto;
+    margin-top: var(--16px);
+    padding: var(--16px);
+    background: var(--black);
+    color: var(--white);
+    border-radius: var(--10px);
+}
+
+#contact__subTitle {
+    margin-top: var(--10px);
+}
+
+#contactForm {
+    margin: var(--16px) auto;
+}
+
+#contactForm__name input, 
+#contactForm__email input, 
+#contactForm__message textarea {
+    width: 100%;
+    margin-top: var(--16px);
+    margin-bottom: var(--16px);
+    padding: var(--10px);
+    font-family: "Nunito", sans-serif;
+    font-size: var(--16px);
+    border-radius: var(--10px);
+}
+
+.sendMessage {
+    border-radius: var(--10px);
+}
+
+.sendMessage:hover {
+    background: rgba(255, 254, 254, 0.963);
+    font-weight: bold;
+}

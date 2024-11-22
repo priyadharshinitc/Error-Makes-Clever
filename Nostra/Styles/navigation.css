@@ -66,7 +66,7 @@
     top: 0;
     left: var(--n200px);
     transition: all 1s ease-in-out;
-    display: none; /* Remove this after completing the project */
+     /* Remove this after completing the project */
 }
 
 #sideNavbar__close {

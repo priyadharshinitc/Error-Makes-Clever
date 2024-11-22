@@ -46,6 +46,9 @@ body {
 
 .btn {
     padding: var(--10px) var(--20px);
+    font-family: "Nunito", sans-serif;
+    font-size: var(--16px);
+    font-weight: 500;
 }
 
 .btn:hover {

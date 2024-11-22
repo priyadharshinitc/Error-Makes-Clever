@@ -1,0 +1,41 @@
+/* News Letter */
+.newsLetter {
+    width: 90%;
+    margin: 0 auto;
+    margin-top: var(--16px);
+    text-align: center;
+}
+
+#newsLetter__title {
+    padding-top: var(--10px);
+    font-size: var(--32px);
+    font-weight: 800;
+}
+
+#newsLetter__subTitle {
+    font-size: var(--20px);
+    font-weight: 400;
+}
+
+.newsLetter input {
+    margin-top: var(--16px);
+    padding: var(--10px) var(--16px);
+    width: 100%;
+    border: 2px solid var(--black);
+}
+
+.subscribeBtn {
+    background: var(--black);
+    color: var(--white);
+    font-size: var(--16px);
+    border-radius: var(--10px);
+    margin-top: var(--16px);
+}
+
+.subscribeBtn span {
+    font-weight: bold;    
+}
+
+.subscribeBtn:hover {
+    font-weight: bold;
+}

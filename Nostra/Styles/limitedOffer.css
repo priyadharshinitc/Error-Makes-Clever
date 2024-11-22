@@ -16,6 +16,7 @@
 
 #limitedOffer__title {
     margin-top: var(--16px);
+    font-size: var(--32px);
 }
 
 #limitedOffer__subTitle {

@@ -1,6 +1,8 @@
 /* Brands */
 .brands {
-    padding: var(--16px) var(--20px);
+    width: 90%;
+    margin: 0 auto;
+    margin-top: var(--16px);
 }
 
 .brandsLogoContainer {

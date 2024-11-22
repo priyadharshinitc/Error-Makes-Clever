@@ -1,0 +1,62 @@
+/* Most Wanted */
+.mostWanted {
+    width: 90%;
+    margin: 0 auto;
+    margin-top: var(--16px);
+}
+
+.mostWanted__productContainer {
+    margin-top: var(--16px);
+    height: var(--450px);
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.mostWanted__product {
+    width: var(--200px);
+    height: var(--200px);
+    margin-top: var(--10px);
+    position: relative;
+}
+
+.mostWanted__product img {
+    width: 100%;
+    height: 100%;
+    border-radius: var(--10px);
+}
+
+.saveBtn {
+    background: red;
+    color: var(--white);
+    font-size: var(--16px);
+    border: none;
+    outline: none;
+    border-radius: var(--10px);
+    padding: var(--5px) var(--10px);
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    z-index: 1;
+}
+ 
+.saveBtn:hover {
+    background: green;
+}
+
+.heart {
+    width: var(--30px);
+    height: var(--30px);
+    position: absolute;
+    bottom: 5%;
+    right: 5%;
+    z-index: 1;
+}
+
+.heart:hover {
+    cursor: pointer;
+    fill: red;
+    stroke: red;
+}

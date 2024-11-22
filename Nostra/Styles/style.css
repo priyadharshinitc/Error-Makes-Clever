@@ -28,6 +28,7 @@
     --200px: 12.5rem;
     --n200px: -12.5rem;
     --250px: 15.625rem;
+    --450px: 28.125rem;
 }
 
 /* 
@@ -60,4 +61,6 @@ z-index Info:
 .sideNavbarContainer - 10
 .newArrivals__product::after - 1
 .shopNowBtn - 2
+.saveBtn - 1
+.heart - 1
 */

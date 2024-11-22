@@ -7,6 +7,8 @@
 
 .newArrivals__productContainer {
     margin-top: var(--16px);
+    height: var(--450px);
+    overflow-y: auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -47,6 +49,7 @@
 .newArrivals__product img {
     width: 100%;
     height: 100%;
+    border-radius: var(--10px);
 }
 
 .shopNowBtn {

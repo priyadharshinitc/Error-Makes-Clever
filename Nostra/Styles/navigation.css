@@ -59,14 +59,13 @@
 .sideNavbarContainer {
     background: var(--black);
     color: var(--white);
-    width: 60%;
+    width: 50%;
     height: 100vh;
     z-index: 10;
     position: fixed;
     top: 0;
-    left: var(--n200px);
+    left: -50%;
     transition: all 1s ease-in-out;
-     /* Remove this after completing the project */
 }
 
 #sideNavbar__close {

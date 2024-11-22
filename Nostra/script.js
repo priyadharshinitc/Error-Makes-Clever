@@ -12,11 +12,11 @@ let sideNavbarContainer = document.querySelector(".sideNavbarContainer");
 let sideNavbar__close = document.querySelector("#sideNavbar__close");
 
 menubar.addEventListener("click", function() {
-    sideNavbarContainer.style.left = "0";
+    sideNavbarContainer.style.left = "0%";
 });
 
 sideNavbar__close.addEventListener("click", function() {
-    sideNavbarContainer.style.left = "var(--n200px)";
+    sideNavbarContainer.style.left = "-50%";
 });
 
 // Image Slider Functionality

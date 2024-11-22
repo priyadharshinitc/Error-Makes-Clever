@@ -30,6 +30,8 @@
 }
 
 .sendMessage {
+    border: none;
+    outline: none;
     border-radius: var(--10px);
 }
 

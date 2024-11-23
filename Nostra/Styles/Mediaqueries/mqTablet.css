@@ -1,0 +1,38 @@
+/* Mediaqueries for Tablet */
+@media screen and (min-width: 768px) {
+    .offerBanner {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .navbar {
+        padding: var(--16px) var(--36px);
+    }
+
+    .sideNavbarContainer {
+        width: 25%;
+    }
+
+    .slider {
+        height: 40vh;
+    }
+
+    .sliderTitle {
+        font-size: var(--36px);
+    }
+
+    .footer {
+        padding: var(--16px) var(--36px);
+    }
+
+    .iconContainer {
+        grid-row: 1;
+        grid-column: 3;
+    }
+
+    .socialMedia {
+        grid-row: 1;
+        grid-column: 3;
+    }
+}

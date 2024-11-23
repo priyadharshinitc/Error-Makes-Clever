@@ -3,6 +3,7 @@
     width: 90%;
     margin: 0 auto;
     margin-top: var(--16px);
+    /* scroll-behavior: smooth; */
 }
 
 .newArrivals__productContainer {
@@ -50,8 +51,6 @@
 }
 
 .shopNowBtn {
-    border: none;
-    outline: none;
     border-radius: var(--10px);
     position: absolute;
     bottom: var(--10px);

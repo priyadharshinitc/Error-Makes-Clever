@@ -51,3 +51,16 @@ favouriteLists.forEach((heart) => {
         heart.classList.toggle("heartLiked");
     });
 });
+
+// New Arrivals Linking Functionality
+// let newArrivalsLists = document.querySelectorAll(".newArrivalsLink");
+
+// function scrollToSection(referTo) {
+//     document.getElementById(referTo).scrollIntoView({behavior: 'smooth'});
+// }
+
+// newArrivalsLists.forEach((newArrivalLink) => {
+//     newArrivalLink.addEventListener("click", function() {
+//         scrollToSection("index.html#newArrivals");
+//     });
+// });

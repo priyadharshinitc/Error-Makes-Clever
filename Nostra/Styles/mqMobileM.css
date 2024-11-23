@@ -1,9 +1,0 @@
-/* Media Queries Mobile M */
-@media screen and (min-width: 375px) {
-    .linkContainer {
-        display: flex;
-        justify-content: flex-start;
-        align-items: flex-start;
-        gap: var(--24px);
-    }
-}

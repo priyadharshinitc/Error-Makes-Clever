@@ -20,7 +20,9 @@
     <link rel="stylesheet" href="./Styles/footer.css">
 
     <!-- Mediaqueries -->
-    <link rel="stylesheet" href="./Styles/mqMobileM.css">
+    <link rel="stylesheet" href="./Styles/Mediaqueries/mqMobileM.css">
+    <link rel="stylesheet" href="./Styles/Mediaqueries/mqTablet.css">
+    <link rel="stylesheet" href="./Styles/Mediaqueries/mqLaptop.css">
 </head>
 <body>
     <!-- Navbar -->
@@ -142,24 +144,28 @@
                     </a>
                 </ul>               
             </div>
-        </div>
 
-        <div class="iconContainer">
-            <!-- Twitter -->
-            <i class="fa-brands fa-twitter fa-xl"></i>
+            <div class="socialMedia">
+                <div class="iconContainer">
+                    <!-- Twitter -->
+                    <i class="fa-brands fa-twitter fa-xl"></i>
+    
+                    <!-- Facebook -->
+                    <i class="fa-brands fa-facebook fa-xl"></i>
+    
+                    <!-- Instagram -->
+                    <i class="fa-brands fa-instagram fa-xl"></i>                
+    
+                    <!-- Youtube -->
+                    <i class="fa-brands fa-youtube fa-xl"></i>
+                </div>
 
-            <!-- Facebook -->
-            <i class="fa-brands fa-facebook fa-xl"></i>
-
-            <!-- Instagram -->
-            <i class="fa-brands fa-instagram fa-xl"></i>                
-
-            <!-- Youtube -->
-            <i class="fa-brands fa-youtube fa-xl"></i>
-        </div>
-        
-        <p>&copy; 2024 nostra.com</p>
-        <p>All rights reserved.</p>
+                <div class="copyright">
+                    <p>&copy; 2024 nostra.com</p>
+                    <p>All rights reserved.</p>
+                </div>
+            </div>
+        </div>                         
     </footer>
 
     <script>
@@ -173,7 +179,7 @@
         });
 
         sideNavbar__close.addEventListener("click", function() {
-            sideNavbarContainer.style.left = "var(--n200px)";
+            sideNavbarContainer.style.left = "-50%";
         });
     </script>
 </body>

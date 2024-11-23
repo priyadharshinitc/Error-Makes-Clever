@@ -7,7 +7,7 @@
     }
 
     .navbar {
-        padding: var(--16px) var(--36px);
+        padding: var(--5px) var(--36px);
     }
 
     .sideNavbarContainer {
@@ -20,6 +20,10 @@
 
     .sliderTitle {
         font-size: var(--36px);
+    }
+
+    .customerService__title p {
+        font-size: var(--20px);
     }
 
     .limitedOffer {

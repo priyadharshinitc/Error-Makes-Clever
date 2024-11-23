@@ -22,13 +22,35 @@
         font-size: var(--36px);
     }
 
-    .footer {
-        padding: var(--16px) var(--36px);
+    .limitedOffer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: var(--20px);
     }
 
-    .iconContainer {
-        grid-row: 1;
-        grid-column: 3;
+    .limitedOffer img {
+        width: 40%;
+    }
+
+    .limitedOffer__content {
+        width: 40%;
+    }
+
+    #limitedOffer__title {
+        margin-top: 0;
+    }
+
+    #limitedOffer__subTitle {
+        font-size: var(--24px);
+    }
+
+    .limitedOffer .shopNowBtn {
+        margin-top: var(--10px);
+    }
+
+    .footer {
+        padding: var(--16px) var(--36px);
     }
 
     .socialMedia {

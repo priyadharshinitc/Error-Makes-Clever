@@ -1,0 +1,96 @@
+/* Collections */
+.collections {
+    width: 90%;
+    margin: 0 auto;
+    margin-top: var(--16px);
+    padding: 0 var(--5px);
+}
+
+.filter {
+    display: grid;
+    gap: var(--16px);
+}
+
+.occassionFilter {
+    grid-row: 1;
+    grid-column: 1;
+}
+
+.coloursFilter {
+    grid-row: 1;
+    grid-column: 2;
+}
+
+.patternFilter {
+    grid-row: 2;
+    grid-column: 1;
+}
+
+.arrivalsFilter {
+    grid-row: 2;
+    grid-column: 2;
+}
+
+.products {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.searchBar {
+    margin: 0 auto;
+    margin-top: var(--16px);
+    padding: var(--16px);
+    border: 2px solid var(--black);
+    border-radius: var(--10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#productSearch {
+    font-size: var(--16px);
+    font-family: "Nunito", sans-serif;
+    border: none;
+    outline: none;
+}
+
+#searchIcon {
+    width: var(--24px);
+    height: var(--24px);
+}
+
+#searchIcon:hover {
+    cursor: pointer;
+}
+
+.dressCollections {
+    margin-top: var(--32px);
+    padding-bottom: var(--16px);
+    display: flex;
+    justify-content: space-around;
+    gap: var(--16px);
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+}
+
+.productItem {
+    width: var(--200px);
+    height: var(--300px);
+    border-radius: var(--10px);
+    text-align: center;
+}
+
+.productItem h1 {
+    text-wrap: wrap;
+}
+
+.productItem img {
+    width: var(--200px);
+    height: var(--200px);
+    border-radius: var(--10px);
+}
+
+.tags {
+    display: none;
+}

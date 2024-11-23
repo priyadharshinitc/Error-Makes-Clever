@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collections</title>
+
+    <!-- Google Font Link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome CDN Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- My Stylesheet -->
+    <link rel="stylesheet" href="./Styles/style.css">
+    <link rel="stylesheet" href="./Styles/navigation.css">
+    <link rel="stylesheet" href="./Styles/collections.css">
+    <link rel="stylesheet" href="./Styles/newsLetter.css">
+    <link rel="stylesheet" href="./Styles/footer.css">
+
+    <!-- Mediaqueries -->
+    <link rel="stylesheet" href="./Styles/Mediaqueries/mqMobileM.css">
+    <link rel="stylesheet" href="./Styles/Mediaqueries/mqTablet.css">
+    <link rel="stylesheet" href="./Styles/Mediaqueries/mqLaptop.css">
+    <link rel="stylesheet" href="./Styles/Mediaqueries/mqLaptopL.css">
+</head>
+<body>
+    <!-- Offer Banner -->
+    <section class="offerBanner">
+        <h3 class="info">Sign Up and GET 20% OFF for your First Order</h3>
+        <p id="offerCloseIcon">X</p>
+    </section>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <h1 class="navbar__title">Nostra</h1>
+        <ul class="navList">
+            <li>
+                <a href="index.html">Home</a>
+            </li>
+
+            <li>
+                <a href="index.html#newArrivals">New Arrivals</a>
+            </li>
+
+            <li>
+                <a href="index.html#mostWanted">Most Wanted</a>
+            </li>
+
+            <li>
+                <a href="collections.html">Collections</a>
+            </li>
+
+            <li>
+                <a href="contact.html">Contact Us</a>
+            </li>
+        </ul>
+
+        <!-- Menubar -->
+        <svg id="menubar" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+        </svg>
+        
+        <!-- Side Navbar -->
+        <section class="sideNavbarContainer">
+            <p id="sideNavbar__close">X</p>
+            <ul class="sideNavList">
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+
+                <li>
+                    <a href="index.html#newArrivals">New Arrivals</a>
+                </li>
+
+                <li>
+                    <a href="index.html#mostWanted">Most Wanted</a>
+                </li>
+
+                <li>
+                    <a href="collections.html">Collections</a>
+                </li>
+
+                <li>
+                    <a href="contact.html">Contact Us</a>
+                </li>
+            </ul>
+        </section>
+    </nav>
+
+    <!-- Filters -->
+    <main class="collections">
+        <section class="filter">
+            <div class="occassionFilter">
+                <h1>Occassion</h1>
+                <div class="filterOption">
+                    <input type="checkbox" id="beach" value="beach">
+                    <label for="beach">Beach</label>
+                </div>
+
+                <div class="filterOption">
+                    <input type="checkbox" id="formals" value="formals">
+                    <label for="formals">Formals</label>
+                </div>
+
+                <div class="filterOption">
+                    <input type="checkbox" id="party" value="party">
+                    <label for="party">Party</label>
+                </div>
+
+
+                <div class="filterOption">
+                    <input type="checkbox" id="summer" value="summer">
+                    <label for="summer">Summer</label>
+                </div>              
+            </div>
+            
+            <div class="coloursFilter">
+                <h1>Colours</h1>
+                <div class="filterOption">
+                    <input type="checkbox" id="multicolour" value="multicolour">
+                    <label for="multicolour">Multicolour</label>
+                </div>
+                
+                <div class="filterOption">
+                    <input type="checkbox" id="blue" value="blue">
+                    <label for="blue">Blue</label>
+                </div>
+
+                <div class="filterOption">   
+                    <input type="checkbox" id="green" value="green">
+                    <label for="green">Green</label>
+                </div>
+
+                <div class="filterOption">
+                    <input type="checkbox" id="red" value="red">
+                    <label for="red">Red</label>
+                </div>
+                                
+                <div class="filterOption">
+                    <input type="checkbox" id="white" value="white">
+                    <label for="white">White</label>
+                </div>               
+            </div>
+
+            <div class="patternFilter">
+                <h1>Pattern</h1>
+                <div class="filterOption">
+                    <input type="checkbox" id="ethnicMotif" value="ethnicMotif">
+                    <label for="ethnicMotif">Ethnic Motif</label>
+                </div>
+                
+                <div class="filterOption">   
+                    <input type="checkbox" id="floral" value="floral">
+                    <label for="floral">Floral</label>
+                </div>                
+            </div>
+
+            <div class="arrivalsFilter">
+                <h1>Arrivals</h1>
+                <div class="filterOption">
+                    <input type="checkbox" id="new" value="new">
+                    <label for="new">New</label>
+                </div>
+                
+                <div class="filterOption">   
+                    <input type="checkbox" id="old" value="old">
+                    <label for="old">Old</label>
+                </div>                
+            </div>
+        </section>
+
+        <section class="products">
+            <div class="searchBar">
+                <input type="text" id="productSearch" placeholder="Search your product...">
+                <svg id="searchIcon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+                </svg>                  
+            </div>
+            
+            <div class="dressCollections">
+                <div class="productItem">
+                    <img src="./Images/Products/multiColorShirt.jpg" alt="Multicolor Shirt">
+                    <h1>Floral Summer Shirt</h1>
+                    <h3>₹220</h3>
+                    <p class="tags">Beach, Summer, Multicolour, Blue, Green, New</p>
+                </div>
+
+                <div class="productItem">
+                    <img src="./Images/Products/lightBlueShirt.jpg" alt="Light Blue Shirt">
+                    <h1>Lightblue Shirt</h1>
+                    <h3>₹260</h3>
+                    <p class="tags">Formals, Blue, Old</p>
+                </div>
+
+                <div class="productItem">
+                    <img src="./Images/Products/flowerPatternShirt.jpg" alt="Flower Pattern Shirt">
+                    <h1>Summer Green Shirt</h1>
+                    <h3>₹260</h3>
+                    <p class="tags">Beach, Summer, Green, Floral, Old</p>
+                </div>
+
+                <div class="productItem">
+                    <img src="./Images/Products/ethnicMotifPatternShirt1.png" alt="Ethnic Motif Pattern Shirt">
+                    <h1>Ethnic Motif Pattern Shirt</h1>
+                    <h3>₹350</h3>
+                    <p class="tags">Party, Red, Ethnic, New</p>
+                </div>
+
+                <div class="productItem">
+                    <img src="./Images/Products/floralShirt.jpg" alt="Floral Shirt">
+                    <h1>Party Floral Shirt</h1>
+                    <h3>₹260</h3>
+                    <p class="tags">Party, Red, Floral, Old</p>
+                </div>
+
+                <div class="productItem">
+                    <img src="./Images/Products/ethnicMotifPatternShirt2.png" alt="Ethnic Motif Pattern Shirt">
+                    <h1>Ethnic Motif Pattern Shirt</h1>
+                    <h3>₹350</h3>
+                    <p class="tags">Party, Blue, Ethnic, New</p>
+                </div>
+
+                <div class="productItem">
+                    <img src="./Images/Products/lightChocolateShirt.jpg" alt="Chocolate Colour Shirt">
+                    <h1>Chocolate Colour Shirt</h1>
+                    <h3>₹350</h3>
+                    <p class="tags">Formals, Old</p>
+                </div>
+
+                <div class="productItem">
+                    <img src="./Images/Products/pinkFlowerShirt.jpg" alt="Pink Flower Shirt">
+                    <h1>Pink Floral Shirt</h1>
+                    <h3>₹300</h3>
+                    <p class="tags">Summer, White, Floral, Old</p>
+                </div>
+
+                <div class="productItem">
+                    <img src="./Images/Products/roseFlowerShirt.jpg" alt="Rose Flower Shirt">
+                    <h1>Pink Floral Shirt</h1>
+                    <h3>₹400</h3>
+                    <p class="tags">Beach, Blue, Floral, Old</p>
+                </div>
+
+                <div class="productItem">
+                    <img src="./Images/Products/whiteShirt.jpg" alt="White Shirt">
+                    <h1>White Colour Shirt</h1>
+                    <h3>₹500</h3>
+                    <p class="tags">Formals, White, New</p>
+                </div>
+
+                <div class="productItem">
+                    <img src="./Images/Products/partyRedShirt.jpg" alt="Party Red Shirt">
+                    <h1>Shirt Party Red</h1>
+                    <h3>₹579</h3>
+                    <p class="tags">Party, Blue, White, New</p>
+                </div>
+
+                <div class="productItem">
+                    <img src="./Images/Products/grayShirt.jpg" alt="Gray Shirt">
+                    <h1>Gray Colour Shirt</h1>
+                    <h3>₹379</h3>
+                    <p class="tags">Formals, Old</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- News Letter -->
+    <section class="newsLetter">
+        <h1 id="newsLetter__title">Join our News Letter</h1>
+        <h2 id="newsLetter__subTitle">Signup for our email newspaper to get exclusive discounts, updates, and more...</h2>
+        <input type="text">
+        <button class="btn subscribeBtn">Subscribe <span>&#8594;</span></button>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <h1 id="footer__title">Nostra</h1>
+        <p id="footer__subTitle">Experience the future of fashion with Nostra. Explore our range of trendy and timeless pieces. Shop effortlessly and dress impeccably.</p>
+
+        <div class="linkContainer">
+            <div class="footer__one">
+                <h3>Company</h3>
+                <ul>
+                    <a>
+                        <li>About Us</li>
+                    </a>
+                    <a href="collections.html">
+                        <li>Collections</li>
+                    </a>
+                    <a>
+                        <li>Careers</li>
+                    </a>
+                    <a>
+                        <li>Blog</li>
+                    </a>
+                </ul>              
+            </div>
+
+            <div class="footer__two">
+                <h3>Support</h3>
+                <ul>
+                    <a href="contact.html">
+                        <li>Contact Us</li>
+                    </a>
+                    <a>
+                        <li>Help and Support</li>
+                    </a>
+                </ul>               
+            </div>
+
+            <div class="socialMedia">
+                <div class="iconContainer">
+                    <!-- Twitter -->
+                    <i class="fa-brands fa-twitter fa-xl"></i>
+    
+                    <!-- Facebook -->
+                    <i class="fa-brands fa-facebook fa-xl"></i>
+    
+                    <!-- Instagram -->
+                    <i class="fa-brands fa-instagram fa-xl"></i>                
+    
+                    <!-- Youtube -->
+                    <i class="fa-brands fa-youtube fa-xl"></i>
+                </div>
+
+                <div class="copyright">
+                    <p>&copy; 2024 nostra.com</p>
+                    <p>All rights reserved.</p>
+                </div>
+            </div>
+        </div>                         
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

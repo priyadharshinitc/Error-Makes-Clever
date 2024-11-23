@@ -21,7 +21,9 @@
 
 /* Navigation */
 .navbar {
-    padding: var(--5px) var(--20px);
+    width: 100%;
+    padding: var(--5px) var(--20px);    
+    margin: 0 auto;
     margin-top: var(--16px);    
     display: flex;
     justify-content: space-between;
@@ -33,6 +35,7 @@
 }
 
 .navbar__title {
+    font-size: var(--32px);
     font-weight: bolder;
 }
 

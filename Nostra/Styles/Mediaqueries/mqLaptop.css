@@ -12,6 +12,15 @@
         height: 50vh;
     }
 
+    #sliderTitleSpan {
+        display: block;
+    }
+
+    .brandLogo p {
+        font-size: var(--24px);
+        margin-top: var(--16px);
+    }
+
     .customerService__title {
         flex-direction: row;
         justify-content: space-between;
@@ -26,6 +35,26 @@
 
     .serviceCard {
         width: var(--200px);
+    }
+
+    .newArrivals__product {
+        width: var(--250px);
+        height: var(--250px);
+    }
+
+    .newArrivals__product img {
+        width: var(--250px);
+        height: var(--250px);
+    }
+
+    .mostWanted__product {
+        width: var(--250px);
+        height: var(--250px);
+    }
+    
+    .mostWanted__product img {
+        width: var(--250px);
+        height: var(--250px);
     }
 
     .limitedOffer {

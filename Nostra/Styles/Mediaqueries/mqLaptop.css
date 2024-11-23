@@ -8,10 +8,29 @@
         display: inline;
     }
 
+    .slider {
+        height: 50vh;
+    }
+
+    .customerService__title {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .serviceCardContainer {
+        flex-wrap: nowrap;
+        gap: 0;
+        justify-content: space-between;        
+    }
+
     .serviceCard {
-        flex-basis: 20%;
-        /* width: 250px; */
-     }
+        width: var(--200px);
+    }
+
+    .limitedOffer {
+        gap: var(--24px);
+    }
 
     .footer {
         padding: var(--16px) var(--40px);

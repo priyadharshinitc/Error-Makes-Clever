@@ -43,7 +43,7 @@
     z-index: 1;
 }
  
-.saveBtn:hover {
+.save {
     background: green;
     font-weight: bold;
 }
@@ -59,6 +59,9 @@
 
 .heart:hover {
     cursor: pointer;
+}
+
+.heartLiked {
     fill: red;
     stroke: red;
 }

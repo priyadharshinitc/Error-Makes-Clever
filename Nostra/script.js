@@ -33,3 +33,21 @@ sliderRightArrow.addEventListener("click", function() {
     sliderImgContainer.style.scrollBehavior = "smooth";
     sliderImgContainer.scrollLeft += 300; 
 });
+
+// Save favourite collections using save button
+let savedLists = document.querySelectorAll(".saveBtn");
+
+savedLists.forEach((saveBtn) => {
+    saveBtn.addEventListener("click", function() {
+        saveBtn.classList.toggle("save");
+    });
+});
+
+// Mark favorite by liking Hearts
+let favouriteLists = document.querySelectorAll(".heart");
+
+favouriteLists.forEach((heart) => {
+    heart.addEventListener("click", function() {
+        heart.classList.toggle("heartLiked");
+    });
+});

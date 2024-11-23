@@ -47,7 +47,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    align-items: center;
+    align-items: flex-start;
     gap: var(--16px);
 }
 
@@ -55,6 +55,11 @@
     background: var(--light-gray);
     padding: var(--13px);
     border-radius: var(--10px);
+    width: var(--300px);
+}
+
+.serviceCard ul {
+    padding: var(--13px);
 }
 
 .serviceCard__Title {

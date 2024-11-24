@@ -57,15 +57,15 @@ You can access my Nostra website by visiting [https://priyadharshinitc.github.io
 * Like/Save functionalities on the product listings are for visual feedback and do not connect to a backend database.
 * The Contact form submission is a front-end feature and doesn't send messages to any email address.
 
-## Contribution
-
-If you would like to contribute or suggest improvements, please feel free to open an issue or create a pull request. Your feedback is greatly appreciated.
-
 ## Future Enhancements
 
 This project serves as a foundation for a fully functional Nostra website.  Future development can include:
 * Back-end integration for user accounts, product management, and shopping cart functionality.
 * Payment processing integration.
+
+## Contribution
+
+If you would like to contribute or suggest improvements, please feel free to open an issue or create a pull request. Your feedback is greatly appreciated.
   
 ## Error Makes Clever
 

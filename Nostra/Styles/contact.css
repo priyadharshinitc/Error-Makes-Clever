@@ -26,6 +26,8 @@
     padding: var(--10px);
     font-family: "Nunito", sans-serif;
     font-size: var(--16px);
+    border: none;
+    outline: none;
     border-radius: var(--10px);
 }
 

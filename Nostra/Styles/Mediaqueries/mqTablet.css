@@ -36,6 +36,14 @@
         font-size: var(--20px);
     }
 
+    .newArrivals__productContainer {
+        flex-wrap: wrap;
+    }
+
+    .mostWanted__productContainer {
+        flex-wrap: wrap;
+    }
+
     .limitedOffer {
         display: flex;
         justify-content: center;
@@ -72,6 +80,10 @@
         grid-column: 3;
     }
 
+    .contact {
+        width: 75%;
+    }
+
     .dressCollections {
         flex-wrap: wrap;
         align-items: center;
@@ -93,6 +105,17 @@
 
     .filter h1 {
         margin-bottom: var(--10px);
+    }
+
+    .filterOption input {
+        width: var(--16px);
+        height: var(--16px);
+        margin-right: var(--5px);
+    }
+
+    .filterOption {
+        padding-bottom: var(--10px);
+        font-size: var(--20px);
     }
 
     .occassionFilter {

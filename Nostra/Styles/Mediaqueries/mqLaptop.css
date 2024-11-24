@@ -72,9 +72,4 @@
     .filter {
         width: 20%;
     }
-
-    .filterOption {
-        padding-bottom: var(--10px);
-        font-size: var(--20px);
-    }
 }

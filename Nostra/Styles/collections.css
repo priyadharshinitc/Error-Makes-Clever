@@ -11,7 +11,8 @@
     gap: var(--16px);
 }
 
-.filterOption:hover {
+.filterOption input:hover, 
+.filterOption label:hover {
     cursor: pointer;
 }
 
@@ -35,43 +36,9 @@
     grid-column: 2;
 }
 
-#verticalLine {
-    display: none;
-}
-
 .products {
     width: 90%;
     margin: 0 auto;
-}
-
-.searchBar {
-    margin: 0 auto;
-    margin-top: var(--16px);
-    border: 2px solid var(--black);
-    border-radius: var(--10px);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-#productSearch {
-    font-size: var(--16px);
-    font-family: "Nunito", sans-serif;
-    border: none;
-    outline: none;
-    border-radius: var(--10px);
-    width: 90%;
-    padding: var(--16px);
-    background: transparent;
-}
-
-#searchIcon {
-    width: var(--24px);
-    height: var(--24px);
-}
-
-#searchIcon:hover {
-    cursor: pointer;
 }
 
 .dressCollections {

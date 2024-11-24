@@ -48,10 +48,16 @@
     margin-right: var(--20px);
 }
 
-.navbar li a {
+.navList li a {
     color: var(--black);
     text-decoration: none;
     font-size: var(--20px);
+}
+
+.navList li a:hover {
+    font-weight: 700;
+    padding-bottom: var(--5px);
+    border-bottom: 2px solid var(--black);
 }
 
 #menubar {
@@ -92,4 +98,10 @@
     color: var(--white);
     text-decoration: none;
     font-size: var(--16px);    
+}
+
+.sideNavList li a:hover {
+    font-weight: 700;
+    padding-bottom: var(--5px);
+    border-bottom: 2px solid var(--white);
 }

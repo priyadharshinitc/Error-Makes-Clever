@@ -21,7 +21,7 @@
     margin-top: var(--16px);
     padding: var(--10px) var(--16px);
     width: 100%;
-    border: 2px solid var(--black);
+    border: var(--2px) solid var(--black);
     border-radius: var(--10px);
 }
 

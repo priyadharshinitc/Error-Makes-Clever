@@ -57,7 +57,7 @@
 .navList li a:hover {
     font-weight: 700;
     padding-bottom: var(--5px);
-    border-bottom: 2px solid var(--black);
+    border-bottom: var(--2px) solid var(--black);
 }
 
 #menubar {
@@ -103,5 +103,5 @@
 .sideNavList li a:hover {
     font-weight: 700;
     padding-bottom: var(--5px);
-    border-bottom: 2px solid var(--white);
+    border-bottom: var(--2px) solid var(--white);
 }

@@ -75,5 +75,43 @@
     .dressCollections {
         flex-wrap: wrap;
         align-items: center;
+        margin-top: 0;
+    }
+ 
+    .collections {
+        display: flex;
+        justify-content: space-around;
+        align-items: flex-start;
+    }
+
+    .filter {
+        padding-right: var(--16px);
+        margin-right: var(--16px);
+        border-right: 2px solid var(--black);
+        width: 25%;
+    }
+
+    .filter h1 {
+        margin-bottom: var(--10px);
+    }
+
+    .occassionFilter {
+        grid-row: 1;
+        grid-column: 1;
+    }
+    
+    .coloursFilter {
+        grid-row: 2;
+        grid-column: 1;
+    }
+    
+    .patternFilter {
+        grid-row: 3;
+        grid-column: 1;
+    }
+    
+    .arrivalsFilter {
+        grid-row: 4;
+        grid-column: 1;
     }
 }

@@ -64,4 +64,17 @@
     .footer {
         padding: var(--16px) var(--40px);
     }
+
+    .collections {
+        width: 95%;
+    }
+
+    .filter {
+        width: 20%;
+    }
+
+    .filterOption {
+        padding-bottom: var(--10px);
+        font-size: var(--20px);
+    }
 }

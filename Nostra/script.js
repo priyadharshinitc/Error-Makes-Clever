@@ -58,15 +58,54 @@ favouriteLists.forEach((heart) => {
     });
 });
 
-// New Arrivals Linking Functionality
-// let newArrivalsLists = document.querySelectorAll(".newArrivalsLink");
+// Select all checkbox tags
+let filterArray = [];
+let checkBoxTags = document.querySelectorAll(".checkBoxTag");
 
-// function scrollToSection(referTo) {
-//     document.getElementById(referTo).scrollIntoView({behavior: 'smooth'});
-// }
+if(checkBoxTags) {
+    checkBoxTags.forEach((tag) => {
+        tag.addEventListener("change", function() {
+            if(tag.checked) {
+                filterArray.push(tag.value);
+            } else {
+                let index = filterArray.indexOf(tag.value);
+                filterArray.splice(index, 1);
+            }
+            console.log(filterArray);
+            
+            displayProduct();
+        });
+    });
+}
 
-// newArrivalsLists.forEach((newArrivalLink) => {
-//     newArrivalLink.addEventListener("click", function() {
-//         scrollToSection("index.html#newArrivals");
-//     });
-// });
+// Product Filter Functionality
+function displayProduct() {
+    let productItems = document.querySelectorAll(".productItem");
+    productItems.forEach((product) => {
+        let isMatch = true;
+
+        // Getting the tags from the current product 
+        let productAllTags = product.querySelector(".tags").textContent;
+
+        // Making the tags into an array
+        let productTagsArray = productAllTags.split(", ");
+        console.log(productTagsArray);
+        
+
+        // Checking if the selected filters are in the productTagsArray
+        for(let count = 0; count < filterArray.length; count++) {
+            let tag = filterArray[count];
+            if(!productTagsArray.includes(tag)) {
+                isMatch = false;
+                count = filterArray.length;
+            }
+        }
+
+        // Decide on showing the product
+        if(filterArray.length > 0 && !isMatch) {
+            product.style.display = "none";
+        } else {
+            product.style.display = "block";
+        }
+    });
+}

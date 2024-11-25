@@ -45,12 +45,13 @@
     margin-top: var(--32px);
     padding-bottom: var(--16px);
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
     align-items: flex-start;
     gap: var(--16px);
-    overflow-x: auto;
+    /* overflow-x: auto;
     overflow-y: hidden;
-    white-space: nowrap;
+    white-space: nowrap; */
 }
 
 .productItem {

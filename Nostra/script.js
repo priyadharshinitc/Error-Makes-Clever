@@ -42,30 +42,32 @@ let sliderRightArrow = document.getElementById("sliderRightArrow");
 // }
 
 // Using marginLeft
-let imgCount = sliderImgContainer.querySelectorAll("img").length;
-let sliderMargin = 0;
-if(sliderLeftArrow) {
-    sliderLeftArrow.addEventListener("click", function() {
-        if(sliderMargin == 0) {
-            sliderMargin = `${(imgCount - 1) * 100}`;
-            sliderImgContainer.style.marginLeft = `-${sliderMargin}vw`;
-        } else {
-            sliderMargin -= 100;
-            sliderImgContainer.style.marginLeft = `-${sliderMargin}vw`;
-        }
-    });
-}
+if(sliderImgContainer) {
+    let imgCount = sliderImgContainer.querySelectorAll("img").length;
+    let sliderMargin = 0;
+    if(sliderLeftArrow) {
+        sliderLeftArrow.addEventListener("click", function() {
+            if(sliderMargin == 0) {
+                sliderMargin = `${(imgCount - 1) * 100}`;
+                sliderImgContainer.style.marginLeft = `-${sliderMargin}vw`;
+            } else {
+                sliderMargin -= 100;
+                sliderImgContainer.style.marginLeft = `-${sliderMargin}vw`;
+            }
+        });
+    }
 
-if(sliderRightArrow) {
-    sliderRightArrow.addEventListener("click", function() {
-        sliderMargin += 100;
-        if(sliderMargin > `${(imgCount - 1) * 100}`) {
-            sliderMargin = 0;
-            sliderImgContainer.style.marginLeft = 0;
-        } else {
-            sliderImgContainer.style.marginLeft = `-${sliderMargin}vw`;
-        }
-    });
+    if(sliderRightArrow) {
+        sliderRightArrow.addEventListener("click", function() {
+            sliderMargin += 100;
+            if(sliderMargin > `${(imgCount - 1) * 100}`) {
+                sliderMargin = 0;
+                sliderImgContainer.style.marginLeft = 0;
+            } else {
+                sliderImgContainer.style.marginLeft = `-${sliderMargin}vw`;
+            }
+        });
+    }
 }
 
 // Save favourite collections using save button

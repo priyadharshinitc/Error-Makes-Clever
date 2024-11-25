@@ -6,6 +6,8 @@
     margin-top: var(--16px);
     border-radius: var(--10px);
     position: relative;
+    display: flex;
+    overflow: hidden;
 }
 
 .slider::after {
@@ -21,20 +23,22 @@
 }
 
 .slider__imgContainer {
-    width: 100%;
-    height: 100%;
+    /* width: 100%;
+    height: 100%; */
     border-radius: var(--10px);
     display: flex;
-    overflow-x: scroll;
+    /* overflow-x: scroll; */
+    /* overflow: hidden; */
+    transition: 1s ease-in-out;
 }
 
-.slider__imgContainer::-webkit-scrollbar {
+/* .slider__imgContainer::-webkit-scrollbar {
     display: none;
-}
+} */
 
 .slider__imgContainer img {
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    /* height: 100%; */
     flex: none;
 }
 

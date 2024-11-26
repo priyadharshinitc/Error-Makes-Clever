@@ -70,6 +70,20 @@ if(sliderImgContainer) {
     }
 }
 
+// Fade In on Scroll
+let elements = document.querySelectorAll(".initial-scroll-animate");
+let windowHeight = window.innerHeight;
+
+document.addEventListener("scroll", function(){
+    elements.forEach((element) => {
+        let elBound = element.getBoundingClientRect();
+        // If the animation should start earlier, you can use elBound.top - 100
+        if(windowHeight > elBound.top) {
+            element.classList.remove("reveal-scroll-animate");
+        }
+    });
+});
+
 // Save favourite collections using save button
 let savedLists = document.querySelectorAll(".saveBtn");
 

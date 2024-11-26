@@ -59,6 +59,15 @@ body {
     cursor: pointer;
 }
 
+/* Used the below 2 classes in New Arrivals, Most Wanted sections */
+.initial-scroll-animate {
+    transition: 3s;
+}
+
+.reveal-scroll-animate {
+    opacity: 0;
+}
+
 /* 
 z-index Info:
 .slider::after - 1

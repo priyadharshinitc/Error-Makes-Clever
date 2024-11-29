@@ -26,35 +26,40 @@ button {
     outline: none;
     padding: 10px 20px;
     background: #FFDDAE;
+    border: 2px solid #fca730;
     border-radius: 30px;
     font-size: 16px;
     font-family: 'Times New Roman', Times, serif;
-    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 4px 8px 5px rgba(0, 0, 0, 0.3);
     transition: 0.3s ease-in-out;
 }
 
 button:hover {
     cursor: pointer;
-    background: green;
-    color: #FFF;
+    background: #ccffcc;
+    border: 2px solid green;
 }
 
 .filter {
     margin-top: 1rem;
     margin-bottom: 1rem;
+    padding: 1rem;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 1rem;
 }
 
 #inputBox {
-    margin-right: 1rem;
     padding: 16px;
     border: none;
     outline: none;
+    border: 2px solid #119bfd;
     border-radius: 30px;
     font-size: 16px;
     font-family: 'Times New Roman', Times, serif;
+    font-weight: 600;
 }
 
 #result {
@@ -73,7 +78,7 @@ button:hover {
 }
 
 #result li:nth-of-type(even) {
-    background: #FBFBFB;
+    background: #f4d9ff;
 }
 
 #result li h2 {
@@ -82,4 +87,11 @@ button:hover {
 
 #result li p {
     font-size: 20px;
+}
+
+@media screen and (min-width: 425px) {
+    .filter {
+        flex-direction: row;
+        gap: 8px;
+    }
 }

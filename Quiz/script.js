@@ -3,11 +3,11 @@ let login = document.getElementById("login");
 let instructions = document.getElementById("instructions");
 let qnaSection = document.getElementById("qnaSection");
 
-// window.onload = () => {
-//     login.style.display = "block";
-//     instructions.style.display = "none";
-//     qnaSection.style.display = "none";
-// }
+window.onload = () => {
+    login.style.display = "block";
+    instructions.style.display = "none";
+    qnaSection.style.display = "none";
+}
 
 // Selection
 let nameRegex = /^[a-zA-Z]+(?: [a-zA-Z]+)*$/;
@@ -55,8 +55,8 @@ goBtn.addEventListener("click", function(){
     } else {
         emptyBox[1].classList.add("hidden");
     }
-    // login.style.display = "none";
-    // instructions.style.display = "block";
+    login.style.display = "none";
+    instructions.style.display = "block";
 });
 
 startBtn.addEventListener("click", function(){

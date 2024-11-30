@@ -55,60 +55,60 @@ goBtn.addEventListener("click", function(){
     } else {
         emptyBox[1].classList.add("hidden");
     }
-    login.style.display = "none";
-    instructions.style.display = "block";
+    // login.style.display = "none";
+    // instructions.style.display = "block";
 });
 
 // Set of Questions and Answers
 let questionSet = [
     {
         question: "What is the purpose of the div tag in HTML?",
-        answer: "C. To group elements together",
+        answer: "To group elements together",
         options: [
-            "A. To define a heading",
-            "B. To create a hyperlink",
-            "C. To group elements together",
-            "D. To format text in bold"
+            "To define a heading",
+            "To create a hyperlink",
+            "To group elements together",
+            "To format text in bold"
         ]
     }, 
     {
         question: "Which HTML attribute is used to specify the source of an image?",
-        answer: "A. src",
+        answer: "src",
         options: [
-            "A. src", 
-            "B. alt", 
-            "C. title", 
-            "D. width"
+            "src", 
+            "alt", 
+            "title", 
+            "width"
         ]
     }, 
     {
         question: "What is the difference between div and span tags?",
-        answer: "B. span is an inline element, while div is a block-level element.",
+        answer: "span is an inline element, while div is a block-level element.",
         options: [
-            "A. div is an inline element, while span is a block-level element.",
-            "B. span is an inline element, while div is a block-level element.",
-            "C. Both are block-level elements.",
-            "D. Both are inline elements."
+            "div is an inline element, while span is a block-level element.",
+            "span is an inline element, while div is a block-level element.",
+            "Both are block-level elements.",
+            "Both are inline elements."
         ]
     }, 
     {
         question: "What is the purpose of the meta tag in HTML?",
-        answer: "C. To provide metadata about the HTML document.",
+        answer: "To provide metadata about the HTML document.",
         options: [
-            "A. To define a heading",
-            "B. To create a hyperlink",
-            "C. To provide metadata about the HTML document.",
-            "D. To define a table"
+            "To define a heading",
+            "To create a hyperlink",
+            "To provide metadata about the HTML document.",
+            "To define a table"
         ]
     }, 
     {
         question: "What is the difference between id and class attributes in HTML?",
-        answer: "B. class attributes can be used multiple times on a page, while id attributes can only be used once",
+        answer: "class attributes can be used multiple times on a page, while id attributes can only be used once",
         options: [
-            "A. id attributes can be used multiple times on a page, while class attributes can only be used once.",
-            "B. class attributes can be used multiple times on a page, while id attributes can only be used once",
-            "C. Both id and class attributes can be used multiple times on a page.",
-            "D. Neither id nor class attributes can be used multiple times on a page."
+            "id attributes can be used multiple times on a page, while class attributes can only be used once.",
+            "class attributes can be used multiple times on a page, while id attributes can only be used once",
+            "Both id and class attributes can be used multiple times on a page.",
+            "Neither id nor class attributes can be used multiple times on a page."
         ]
     }
 ]
@@ -126,6 +126,7 @@ let nextBtn = document.getElementById("nextBtn");
 let showResultBtn = document.getElementById("showResultBtn");
 
 let count = 0;
+let score = 0;
 
 let getIndex = () => {
     qnaSection.style.display = "block";
@@ -141,9 +142,9 @@ function displayQns(currentIndex, previousIndex, nextIndex) {
     question.innerHTML = `<strong>Question: ${currentIndex + 1}</strong> ${questionSet[currentIndex].question}`;
     questionSet[currentIndex].options.forEach((option) => {
         if(option === questionSet[currentIndex].answer) {
-            options.innerHTML += `<label id=${questionSet[currentIndex + 1]} class="border-2 border-blue-800 p-2 rounded-md block w-full mb-3 cursor-pointer"><input type="radio" class="hidden">${option}</label>`;
+            options.innerHTML += `<label class="border-2 border-blue-800 p-2 rounded-md block w-full mb-3 cursor-pointer"><input type="radio" name="Qn ${currentIndex + 1}" onclick=check(this) value=1> ${option}</label>`;
         } else {
-            options.innerHTML += `<label class="border-2 border-blue-800 p-2 rounded-md block w-full mb-3 cursor-pointer"><input type="radio" class="hidden">${option}</label>`;
+            options.innerHTML += `<label class="border-2 border-blue-800 p-2 rounded-md block w-full mb-3 cursor-pointer"><input type="radio" name="Qn ${currentIndex + 1}" onclick=check(this) value=0> ${option}</label>`;
         }            
     });
 
@@ -162,11 +163,18 @@ function displayQns(currentIndex, previousIndex, nextIndex) {
     }
 }
 
+// Score Calculation
+function check(radio) {
+    if(radio.checked) {
+        score += (Number(radio.value) === 1) ? 10 : 0;
+    }
+}
+
 // Go to previous question
-prevBtn.addEventListener("click", function() {
-    count--;
-    getIndex();
-});
+// prevBtn.addEventListener("click", function() {
+//     count--;
+//     getIndex();
+// });
 
 // Go to next question
 nextBtn.addEventListener("click", function() {
@@ -183,5 +191,5 @@ startBtn.addEventListener("click", function(){
 let result = document.getElementById("result");
 showResultBtn.addEventListener("click", function() {
     qnaSection.style.display = "none";
-    result.innerHTML = "Result";
+    result.innerHTML = score;
 });

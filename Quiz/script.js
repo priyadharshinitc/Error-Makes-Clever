@@ -20,13 +20,17 @@ let emptyBox = document.querySelectorAll(".emptyBox");
 let nameError = document.getElementById("nameError");
 let emailError = document.getElementById("emailError");
 
+let validate = true;
+
 // Checking Valid Username, email address
 userName.addEventListener("input", function() {
     if(nameRegex.test(userName.value) === false) {
         emptyBox[0].classList.add("hidden");
         nameError.classList.remove("hidden");
+        validate = false;
     } else {
         nameError.classList.add("hidden");
+        validate = true;
     }
 });
 
@@ -34,73 +38,45 @@ email.addEventListener("input", function(){
     if(emailRegex.test(email.value) === false) {
         emptyBox[1].classList.add("hidden");
         emailError.classList.remove("hidden");
+        validate = false;
     } else {
         emailError.classList.add("hidden");
+        validate = true;
     }
 });
-
-let startBtn = document.getElementById("startBtn");
 
 // Display Instructions
 let goBtn = document.getElementById("goBtn");
 goBtn.addEventListener("click", function(){
     if(userName.value.trim() === "") {
         emptyBox[0].classList.remove("hidden");
+        validate = false;
     } else {
         emptyBox[0].classList.add("hidden");
+        validate = true;
     }   
 
     if(email.value.trim() === "") {
         emptyBox[1].classList.remove("hidden");
+        validate = false;
     } else {
         emptyBox[1].classList.add("hidden");
+        validate = true;
     }
-    login.style.display = "none";
-    instructions.style.display = "block";
+
+    if(validate === true) {
+        login.style.display = "none";
+        instructions.style.display = "block";
+    }
 });
 
+// Show Questions
+let startBtn = document.getElementById("startBtn");
 startBtn.addEventListener("click", function(){
     instructions.style.display = "none";
     getIndex();
     callTimer;
 });
-
-// Timer
-let timer = document.getElementById("timer");
-let timerIcon = document.getElementById("timerIcon");
-let runTime = document.getElementById("runTime");
-let startTime = 1.5;
-let time = startTime * 60;
-let minutes = 0;
-let seconds = 0;
-
-let callTimer = setInterval(updateTime, 1000);
-
-function updateTime() {
-    minutes = Math.floor(time / 60);
-    seconds = time % 60;
-    minutes = (minutes < 10) ? ('0' + minutes) : minutes;
-    seconds = (seconds < 10) ? ('0' + seconds) : seconds;
-    runTime.innerHTML = `${minutes}:${seconds}`;
-    time--;
-    time = (time < 0) ? 0 : time;
-    if(time < 30) {
-        timerIcon.style.fill = "#FFF";
-        timer.style.backgroundColor = "red";
-        timer.style.color = "white";
-    }
-
-    if(time === 0) {
-        timer.style.display = "none";
-        qnaSection.style.display = "none";
-        result.style.display = "block";
-        result.innerHTML = score;
-    }
-
-    if(time < 0) {
-        clearInterval(callTimer);
-    }
-}
 
 // Set of Questions and Answers
 let questionSet = [
@@ -227,19 +203,62 @@ nextBtn.addEventListener("click", function() {
 });
 
 // Display Result
-let result = document.getElementById("result");
-let myScore = document.getElementById("myScore");
+let resultSection = document.getElementById("resultSection");
+let yourName = document.getElementById("yourName");
+let yourScore = document.getElementById("yourScore");
 showResultBtn.addEventListener("click", function() {
     timer.style.display = "none";
     qnaSection.style.display = "none";
-    result.style.display = "flex";
-    myScore.innerHTML = score;
+    resultSection.style.display = "flex";
+    yourName.innerHTML = `${userName.value}`;
+    yourScore.innerHTML = score;
 });
+
+// Timer
+let timer = document.getElementById("timer");
+let timerIcon = document.getElementById("timerIcon");
+let runTime = document.getElementById("runTime");
+let startTime = 1.5;
+let time = startTime * 60;
+let minutes = 0;
+let seconds = 0;
+
+let callTimer = setInterval(updateTime, 1000);
+
+function updateTime() {
+    minutes = Math.floor(time / 60);
+    seconds = time % 60;
+    minutes = (minutes < 10) ? ('0' + minutes) : minutes;
+    seconds = (seconds < 10) ? ('0' + seconds) : seconds;
+    runTime.innerHTML = `${minutes}:${seconds}`;
+    time--;
+    time = (time < 0) ? 0 : time;
+    if(time < 30) {
+        timerIcon.style.fill = "#FFF";
+        timer.style.backgroundColor = "red";
+        timer.style.color = "white";
+    }
+
+    if(time === 0) {
+        timer.style.display = "none";
+        qnaSection.style.display = "none";
+        resultSection.style.display = "flex";
+        yourName.innerHTML = `${userName.value}`;
+        yourScore.innerHTML = score;
+    }
+
+    if(time < 0) {
+        clearInterval(callTimer);
+    }
+}
 
 // Show Answer Sheet
 let tryAgain = document.getElementById("tryAgain");
 tryAgain.addEventListener("click", function() {
-    count = 0;
+    resultSection.style.display = "none";
+    count =  0;
+    score = 0;
     getIndex();
+    startTime = 1.5;
     callTimer;
-})
+});

@@ -38,3 +38,21 @@ email.addEventListener("input", function(){
         emailError.classList.add("hidden");
     }
 });
+
+// Display Instructions
+let goBtn = document.getElementById("goBtn");
+goBtn.addEventListener("click", function(){
+    if(userName.value.trim() === "") {
+        emptyBox[0].classList.remove("hidden");
+    } else {
+        emptyBox[0].classList.add("hidden");
+    }   
+
+    if(email.value.trim() === "") {
+        emptyBox[1].classList.remove("hidden");
+    } else {
+        emptyBox[1].classList.add("hidden");
+    }
+    // login.style.display = "none";
+    // instructions.style.display = "block";
+});

@@ -239,6 +239,7 @@ showResultBtn.addEventListener("click", function() {
 // Show Answer Sheet
 let tryAgain = document.getElementById("tryAgain");
 tryAgain.addEventListener("click", function() {
+    count = 0;
     getIndex();
     callTimer;
 })

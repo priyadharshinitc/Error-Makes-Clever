@@ -59,6 +59,49 @@ goBtn.addEventListener("click", function(){
     // instructions.style.display = "block";
 });
 
+startBtn.addEventListener("click", function(){
+    instructions.style.display = "none";
+    getIndex();
+    callTimer;
+});
+
+// Timer
+let timer = document.getElementById("timer");
+let timerIcon = document.getElementById("timerIcon");
+let runTime = document.getElementById("runTime");
+let startTime = 1.5;
+let time = startTime * 60;
+let minutes = 0;
+let seconds = 0;
+
+let callTimer = setInterval(updateTime, 1000);
+
+function updateTime() {
+    minutes = Math.floor(time / 60);
+    seconds = time % 60;
+    minutes = (minutes < 10) ? ('0' + minutes) : minutes;
+    seconds = (seconds < 10) ? ('0' + seconds) : seconds;
+    runTime.innerHTML = `${minutes}:${seconds}`;
+    time--;
+    time = (time < 0) ? 0 : time;
+    if(time < 30) {
+        timerIcon.style.fill = "#FFF";
+        timer.style.backgroundColor = "red";
+        timer.style.color = "white";
+    }
+
+    if(time === 0) {
+        timer.style.display = "none";
+        qnaSection.style.display = "none";
+        result.style.display = "block";
+        result.innerHTML = score;
+    }
+
+    if(time < 0) {
+        clearInterval(callTimer);
+    }
+}
+
 // Set of Questions and Answers
 let questionSet = [
     {
@@ -117,11 +160,11 @@ let currentIndex = -1;
 let previousIndex = -1;
 let nextIndex = -1;
 
-let qnaDiv = document.getElementById("qnaDiv");
+// let qnaDiv = document.getElementById("qnaDiv");
 let question = document.getElementById("question");
 let options = document.getElementById("options");
-let btnContainer = document.getElementById("btnContainer");
-let prevBtn = document.getElementById("prevBtn");
+// let btnContainer = document.getElementById("btnContainer");
+// let prevBtn = document.getElementById("prevBtn");
 let nextBtn = document.getElementById("nextBtn");
 let showResultBtn = document.getElementById("showResultBtn");
 
@@ -134,6 +177,7 @@ let getIndex = () => {
     currentIndex = count;
     nextIndex = count + 1;
     displayQns(currentIndex, previousIndex, nextIndex);
+    timer.style.display = "flex";
 }
 
 // Display Question and Answers
@@ -148,11 +192,11 @@ function displayQns(currentIndex, previousIndex, nextIndex) {
         }            
     });
 
-    if(previousIndex === -1) {
-        prevBtn.style.display = "none";
-    } else {
-        prevBtn.style.display = "block";
-    }
+    // if(previousIndex === -1) {
+    //     prevBtn.style.display = "none";
+    // } else {
+    //     prevBtn.style.display = "block";
+    // }
 
     if(nextIndex === 5) {
         nextBtn.style.display = "none";
@@ -182,14 +226,19 @@ nextBtn.addEventListener("click", function() {
     getIndex();
 });
 
-startBtn.addEventListener("click", function(){
-    instructions.style.display = "none";
-    getIndex();
-});
-
 // Display Result
 let result = document.getElementById("result");
+let myScore = document.getElementById("myScore");
 showResultBtn.addEventListener("click", function() {
+    timer.style.display = "none";
     qnaSection.style.display = "none";
-    result.innerHTML = score;
+    result.style.display = "flex";
+    myScore.innerHTML = score;
 });
+
+// Show Answer Sheet
+let tryAgain = document.getElementById("tryAgain");
+tryAgain.addEventListener("click", function() {
+    getIndex();
+    callTimer;
+})

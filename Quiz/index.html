@@ -90,6 +90,13 @@
     </section>
 
     <!-- QnA -->
+    <section id="timer" class="hidden bg-white text-black justify-center items-center gap-4 p-5 rounded-xl w-fit">
+        <svg id="timerIcon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000" height="20px" width="20px" version="1.1" id="Layer_1" viewBox="0 0 455 455" xml:space="preserve">
+            <path d="M332.229,90.04l14.238-27.159l-26.57-13.93L305.67,76.087c-19.618-8.465-40.875-13.849-63.17-15.523V30h48.269V0H164.231v30  H212.5v30.563c-22.295,1.674-43.553,7.059-63.171,15.523L135.103,48.95l-26.57,13.93l14.239,27.16  C67.055,124.958,30,186.897,30,257.5C30,366.576,118.424,455,227.5,455S425,366.576,425,257.5  C425,186.896,387.944,124.958,332.229,90.04z M355,272.5H212.5V130h30v112.5H355V272.5z"/>
+            </svg>
+        <p id="runTime" class="font-bold">02:30</p>
+    </section>
+
     <main id="qnaSection" class="hidden bg-white text-black m-5 p-5 rounded-xl w-3/4 md:w-1/2 xl:w-1/3">
         <div id="qnaDiv">
             <h1 id="question" class="text-xl"></h1>
@@ -100,7 +107,7 @@
                 <label class="border-2 border-blue-800 p-2 rounded-md block w-full mb-3 cursor-pointer"><input type="checkbox" class="hidden">D. To format text in bold</label> -->
             </div>
             <div id="btnContainer" class="flex justify-center items-center gap-5">
-                <button id="prevBtn" class=" bg-indigo-600 duration-300 hover:bg-green-800 text-white p-3 rounded-2xl mt-3">Previous</button>
+                <!-- <button id="prevBtn" class=" bg-indigo-600 duration-300 hover:bg-green-800 text-white p-3 rounded-2xl mt-3">Previous</button> -->
                 <button id="nextBtn" class="bg-indigo-600 duration-300 hover:bg-green-800 text-white p-3 rounded-2xl mt-3">Next</button>
                 <button id="showResultBtn" class="hidden bg-indigo-600 duration-300 hover:bg-green-800 text-white p-3 rounded-2xl mt-3">Next</button>
             </div>
@@ -108,7 +115,14 @@
     </main>
 
     <!-- Ṛesult -->
-    <div id="result"></div>
+    <section id="result" class="hidden flex-col justify-center items-center bg-white text-gray-700 m-5 p-5 rounded-xl w-3/4 md:w-1/2 xl:w-1/3">
+        <h1 class="text-2xl font-bold text-center">Result</h1>
+        <h2 class="text-xl mt-3">Your score is <span id="myScore"></span>/50</h2>
+        <div class="flex gap-4">
+            <button id="tryAgain" class="bg-indigo-600 duration-300 hover:bg-green-800 text-white p-3 rounded-2xl mt-3">Try Again</button>
+            <button id="viewAnswer" class="bg-indigo-600 duration-300 hover:bg-green-800 text-white p-3 rounded-2xl mt-3">View Answer</button>
+        </div>
+    </section>
     
     <!-- Answer Sheet -->
     <script src="script.js"></script>

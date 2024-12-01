@@ -42,8 +42,9 @@ goBtn.addEventListener("click", function(){
     }
 
     // Checking Valid Username, email address
+    let userValue = userName.value:
     userName.addEventListener("input", function() {
-        if(nameRegex.test(userName.value) === false) {
+        if(nameRegex.test(userValue) === false) {
             emptyBox[0].classList.add("hidden");
             nameError.classList.remove("hidden");
             validate = false;
@@ -53,8 +54,9 @@ goBtn.addEventListener("click", function(){
         } 
     });
 
+    let emailValue = email.value;
     email.addEventListener("input", function(){
-        if(emailRegex.test(email.value) === false) {
+        if(emailRegex.test(emailValue) === false) {
             emptyBox[1].classList.add("hidden");
             emailError.classList.remove("hidden");
             validate = false;

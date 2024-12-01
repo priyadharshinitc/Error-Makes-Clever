@@ -21,6 +21,34 @@ let nameError = document.getElementById("nameError");
 let emailError = document.getElementById("emailError");
 
 let validate = true;
+let nameValid = true;
+let emailValid = true;
+
+// Checking Valid Username, email address
+username.addEventListener("input", function(){
+    if(nameRegex.test(username.value) === false) {
+            emptyBox[0].classList.add("hidden");
+            nameError.classList.remove("hidden");
+            validate = false;
+            nameValid = false;
+        } else {
+            nameError.classList.add("hidden");
+            validate = true;
+            nameValid = true;
+}
+
+email.addEventListener("input", function(){
+        if(emailRegex.test(email.value) === false) {
+            emptyBox[1].classList.add("hidden");
+            emailError.classList.remove("hidden");
+            validate = false;
+            emailValid = false;
+        } else {
+            emailError.classList.add("hidden");
+            validate = true;
+            emailValid = true;
+        }
+    });
 
 // Display Instructions
 let goBtn = document.getElementById("goBtn");
@@ -28,35 +56,19 @@ goBtn.addEventListener("click", function(){
     if(userName.value.trim() === "") {
         emptyBox[0].classList.remove("hidden");
         validate = false;
-    } else {
-        emptyBox[0].classList.add("hidden");
-        validate = true;
-    }   
-
-    if(email.value.trim() === "") {
-        emptyBox[1].classList.remove("hidden");
-        validate = false;
-    } else {
-        emptyBox[1].classList.add("hidden");
-        validate = true;
-    }
-
-    // Checking Valid Username, email address
-    let userValue = userName.value:
-    userName.addEventListener("input", function() {
-        if(nameRegex.test(userValue) === false) {
+    } else if(nameRegex.test(username.value) === false) {
             emptyBox[0].classList.add("hidden");
             nameError.classList.remove("hidden");
             validate = false;
         } else {
             nameError.classList.add("hidden");
             validate = true;
-        } 
-    });
+        }   
 
-    let emailValue = email.value;
-    email.addEventListener("input", function(){
-        if(emailRegex.test(emailValue) === false) {
+    if(email.value.trim() === "") {
+        emptyBox[1].classList.remove("hidden");
+        validate = false;
+    }else if(emailRegex.test(emailValue) === false) {
             emptyBox[1].classList.add("hidden");
             emailError.classList.remove("hidden");
             validate = false;
@@ -64,9 +76,8 @@ goBtn.addEventListener("click", function(){
             emailError.classList.add("hidden");
             validate = true;
         }
-    });
-
-    if(validate === true) {
+    
+    if(validate === true && userValid === true && emailValid === true) {
         login.style.display = "none";
         instructions.style.display = "block";
     }

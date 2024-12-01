@@ -1,4 +1,4 @@
-// Initial Display
+// Welcome, login
 let login = document.getElementById("login");
 let instructions = document.getElementById("instructions");
 let qnaSection = document.getElementById("qnaSection");
@@ -70,14 +70,6 @@ goBtn.addEventListener("click", function(){
     }
 });
 
-// Show Questions
-let startBtn = document.getElementById("startBtn");
-startBtn.addEventListener("click", function(){
-    instructions.style.display = "none";
-    getIndex();
-    callTimer;
-});
-
 // Set of Questions and Answers
 let questionSet = [
     {
@@ -132,49 +124,67 @@ let questionSet = [
     }
 ]
 
-let currentIndex = -1;
-let previousIndex = -1;
-let nextIndex = -1;
-
-// let qnaDiv = document.getElementById("qnaDiv");
-let question = document.getElementById("question");
-let options = document.getElementById("options");
-// let btnContainer = document.getElementById("btnContainer");
-// let prevBtn = document.getElementById("prevBtn");
-let nextBtn = document.getElementById("nextBtn");
-let showResultBtn = document.getElementById("showResultBtn");
-
-let count = 0;
-let score = 0;
-
-let getIndex = () => {
-    qnaSection.style.display = "block";
-    previousIndex = count - 1;
-    currentIndex = count;
-    nextIndex = count + 1;
-    displayQns(currentIndex, previousIndex, nextIndex);
-    timer.style.display = "flex";
+let qnaContainer = document.getElementById("qnaContainer");
+let btnContainer = document.getElementById("btnContainer");
+for(let i = 0; i < questionSet.length; i++) {
+    generateQnA(i);
 }
 
-// Display Question and Answers
-function displayQns(currentIndex, previousIndex, nextIndex) {
-    options.innerHTML = "";
-    question.innerHTML = `<strong>Question: ${currentIndex + 1}</strong> ${questionSet[currentIndex].question}`;
-    questionSet[currentIndex].options.forEach((option) => {
-        if(option === questionSet[currentIndex].answer) {
-            options.innerHTML += `<label class="border-2 border-blue-800 p-2 rounded-md block w-full mb-3 cursor-pointer"><input type="radio" name="Qn ${currentIndex + 1}" onclick=check(this) value=1> ${option}</label>`;
+function generateQnA(cIndex) {
+    let qnaDiv = document.createElement("div");
+    qnaDiv.className = "qnaDiv flex-none";
+    let questionHeader = document.createElement("h1");
+    questionHeader.className = "text-xl";
+    questionHeader.innerHTML = `<strong>Question: ${cIndex + 1}</strong> ${questionSet[cIndex].question}`;
+
+    let optionsDiv = document.createElement("div");
+    optionsDiv.className = "mt-3 flex flex-col justify-center items-center";
+    
+    questionSet[cIndex].options.forEach((option) => {
+        if(option === questionSet[cIndex].answer) {
+            optionsDiv.innerHTML += `<label class="border-2 border-blue-800 p-2 rounded-md block w-full mb-3 cursor-pointer"><input type="radio" name="Qn ${cIndex + 1}" onclick=check(this) data-validate="true"> ${option}</label>`;
         } else {
-            options.innerHTML += `<label class="border-2 border-blue-800 p-2 rounded-md block w-full mb-3 cursor-pointer"><input type="radio" name="Qn ${currentIndex + 1}" onclick=check(this) value=0> ${option}</label>`;
+            optionsDiv.innerHTML += `<label class="border-2 border-blue-800 p-2 rounded-md block w-full mb-3 cursor-pointer"><input type="radio" name="Qn ${cIndex + 1}" onclick=check(this) data-validate="false"> ${option}</label>`;
         }            
     });
 
-    // if(previousIndex === -1) {
-    //     prevBtn.style.display = "none";
-    // } else {
-    //     prevBtn.style.display = "block";
-    // }
+    qnaDiv.appendChild(questionHeader);
+    qnaDiv.appendChild(optionsDiv);
+    qnaDiv.style.display = "none";
+    qnaContainer.appendChild(qnaDiv);
+}
 
-    if(nextIndex === 5) {
+// Display Question and Answers
+let qnaDivs = document.querySelectorAll(".qnaDiv");
+let previousIndex = 0;
+let currentIndex = 0;
+let nextIndex = 0;
+let callTimer;
+
+function displayQuestion(index) {
+    timer.style.display = "flex";
+    qnaSection.style.display = "flex";
+    previousIndex = index - 1;
+    currentIndex = index;
+    nextIndex = index + 1;
+    
+    if(qnaDivs[previousIndex]) {
+        qnaDivs[previousIndex].style.display = "none";
+    }
+
+    if(qnaDivs[nextIndex]) {
+        qnaDivs[nextIndex].style.display = "none";
+    }
+
+    qnaDivs[index].style.display = "block";
+    
+    if(previousIndex < 0) {
+        prevBtn.style.display = "none";
+    } else {
+        prevBtn.style.display = "block";
+    }
+
+    if(nextIndex === qnaDivs.length) {
         nextBtn.style.display = "none";
         showResultBtn.style.display = "block";
     } else {
@@ -183,47 +193,62 @@ function displayQns(currentIndex, previousIndex, nextIndex) {
     }
 }
 
-// Score Calculation
-function check(radio) {
-    if(radio.checked) {
-        score += (Number(radio.value) === 1) ? 10 : 0;
-    }
-}
+// Previous and Next Button Functionalities
+let prevBtn = document.getElementById("prevBtn");
+let nextBtn = document.getElementById("nextBtn");
 
 // Go to previous question
-// prevBtn.addEventListener("click", function() {
-//     count--;
-//     getIndex();
-// });
+prevBtn.addEventListener("click", function() {
+    displayQuestion(previousIndex);
+});
 
 // Go to next question
 nextBtn.addEventListener("click", function() {
-    count++;
-    getIndex();
+    displayQuestion(nextIndex);
 });
 
-// Display Result
+// Setting checked attribute
+function check(radio) {
+    radio.setAttribute("checked", "true");
+}
+
+// Score Calculation
+let score = 0;
+function scoreCalculation() {
+    score = 0;
+    let allRadioButtons = document.querySelectorAll('input[type="radio"]:checked');
+    allRadioButtons.forEach((radioBtn) => {
+        score += (radioBtn.getAttribute("data-validate") === "true") ? 10 : -5;
+    });
+}
+
+// Show Result Button functionality
+let showResultBtn = document.getElementById("showResultBtn");
 let resultSection = document.getElementById("resultSection");
 let yourName = document.getElementById("yourName");
 let yourScore = document.getElementById("yourScore");
-showResultBtn.addEventListener("click", function() {
-    timer.style.display = "none";
-    qnaSection.style.display = "none";
+
+function showResult() {
+    scoreCalculation();
     resultSection.style.display = "flex";
     yourName.innerHTML = `${userName.value}`;
     yourScore.innerHTML = score;
+}
+
+// Display Result
+showResultBtn.addEventListener("click", function() {
+    timer.style.display = "none";
+    qnaSection.style.display = "none";
+    showResult();
 });
 
 // Timer
-let timer = document.getElementById("timer");
 let timerIcon = document.getElementById("timerIcon");
 let runTime = document.getElementById("runTime");
 let startTime = 1.5;
 let time = startTime * 60;
 let minutes = 0;
 let seconds = 0;
-
-let callTimer = setInterval(updateTime, 1000);
 
 function updateTime() {
     minutes = Math.floor(time / 60);
@@ -237,14 +262,13 @@ function updateTime() {
         timerIcon.style.fill = "#FFF";
         timer.style.backgroundColor = "red";
         timer.style.color = "white";
+        timer.classList.add("animate-pulse");
     }
 
     if(time === 0) {
         timer.style.display = "none";
         qnaSection.style.display = "none";
-        resultSection.style.display = "flex";
-        yourName.innerHTML = `${userName.value}`;
-        yourScore.innerHTML = score;
+        showResult();
     }
 
     if(time < 0) {
@@ -252,13 +276,61 @@ function updateTime() {
     }
 }
 
-// Show Answer Sheet
-let tryAgain = document.getElementById("tryAgain");
-tryAgain.addEventListener("click", function() {
-    resultSection.style.display = "none";
-    count =  0;
-    score = 0;
-    getIndex();
-    startTime = 1.5;
-    callTimer;
+// Show Questions
+let startBtn = document.getElementById("startBtn");
+let timer = document.getElementById("timer");
+
+startBtn.addEventListener("click", function(){
+    instructions.style.display = "none";
+    displayQuestion(0);
+    callTimer = setInterval(updateTime, 1000);
+});
+
+// Display Answer Sheet
+let viewAnswer = document.getElementById("viewAnswer");
+let answerSheet = document.getElementById("answerSheet");
+
+viewAnswer.addEventListener("click", function() {
+    setTimeout(() => {
+        resultSection.style.display = "none";
+    }, 200);
+    
+    for(let i = 0; i < questionSet.length; i++) {
+        let displaySet = document.createElement("div");
+        displaySet.className = "mb-3";
+
+        let qnHeader = document.createElement("h1");
+        qnHeader.className = "text-xl";
+        qnHeader.innerHTML = `<strong>${qnaDivs[i].querySelector("h1").textContent}</strong>` ;
+
+        let ansDiv = document.createElement("ul");
+        ansDiv.className = "mt-3 flex flex-col justify-center items-left";
+        ansDiv.style.listStyleType = "disc";
+        ansDiv.style.listStylePosition = "inside";
+        
+        qnaDivs[i].querySelectorAll("label").forEach((label) => {
+            let inputBox = label.querySelector('input[type="radio"]');
+            let li = document.createElement("li");
+            li.textContent = label.textContent;
+
+            if((inputBox.checked) && (inputBox.getAttribute("data-validate") === "true")) {
+                li.style.color = "green";
+            } else if((inputBox.checked) && (inputBox.getAttribute("data-validate") === "false")){
+                li.style.color = "red";
+            }
+
+            if(inputBox.getAttribute("data-validate") === "true"){
+                li.style.color = "green";
+                li.style.fontWeight = "bold";
+            }
+            
+            ansDiv.appendChild(li);
+        });
+        
+        displaySet.appendChild(qnHeader);
+        displaySet.appendChild(ansDiv);
+        answerSheet.appendChild(displaySet);
+    }
+
+    answerSheet.style.display = "block";
 });

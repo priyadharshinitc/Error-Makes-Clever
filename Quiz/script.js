@@ -21,30 +21,35 @@ let nameError = document.getElementById("nameError");
 let emailError = document.getElementById("emailError");
 
 let validate = true;
-let nameValid = true;
+let userValid = true;
 let emailValid = true;
 
 // Checking Valid Username, email address
-username.addEventListener("input", function(){
-    if(nameRegex.test(username.value) === false) {
-            emptyBox[0].classList.add("hidden");
-            nameError.classList.remove("hidden");
-            nameValid = false;
-        } else {
-            nameError.classList.add("hidden");
-            nameValid = true;
-}
+userName.addEventListener("input", function() {
+    if(nameRegex.test(userName.value) === false) {
+        emptyBox[0].classList.add("hidden");
+        nameError.classList.remove("hidden");
+        validate = false;
+        userValid = false;
+    } else {
+        nameError.classList.add("hidden");
+        validate = true;
+        userValid = true;
+    }
+});
 
 email.addEventListener("input", function(){
-        if(emailRegex.test(email.value) === false) {
-            emptyBox[1].classList.add("hidden");
-            emailError.classList.remove("hidden");
-            emailValid = false;
-        } else {
-            emailError.classList.add("hidden");
-            emailValid = true;
-        }
-    });
+    if(emailRegex.test(email.value) === false) {
+        emptyBox[1].classList.add("hidden");
+        emailError.classList.remove("hidden");
+        validate = false;
+        emailValid = false;
+    } else {
+        emailError.classList.add("hidden");
+        validate = true;
+        emailValid = true;
+    }
+});
 
 // Display Instructions
 let goBtn = document.getElementById("goBtn");
@@ -53,19 +58,19 @@ goBtn.addEventListener("click", function(){
         emptyBox[0].classList.remove("hidden");
         validate = false;
     } else {
-            nameError.classList.add("hidden");
-            validate = true;
-        }   
+        emptyBox[0].classList.add("hidden");
+        validate = true;
+    }   
 
     if(email.value.trim() === "") {
         emptyBox[1].classList.remove("hidden");
         validate = false;
     } else {
-            emailError.classList.add("hidden");
-            validate = true;
-        }
-    
-    if(validate === true && userValid === true && emailValid === true) {
+        emptyBox[1].classList.add("hidden");
+        validate = true;
+    }
+
+    if((validate === true) && (userValid === true) &&(emailValid === true)) {
         login.style.display = "none";
         instructions.style.display = "block";
     }

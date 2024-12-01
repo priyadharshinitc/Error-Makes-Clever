@@ -22,29 +22,6 @@ let emailError = document.getElementById("emailError");
 
 let validate = true;
 
-// Checking Valid Username, email address
-userName.addEventListener("input", function() {
-    if(nameRegex.test(userName.value) === false) {
-        emptyBox[0].classList.add("hidden");
-        nameError.classList.remove("hidden");
-        validate = false;
-    } else {
-        nameError.classList.add("hidden");
-        validate = true;
-    }
-});
-
-email.addEventListener("input", function(){
-    if(emailRegex.test(email.value) === false) {
-        emptyBox[1].classList.add("hidden");
-        emailError.classList.remove("hidden");
-        validate = false;
-    } else {
-        emailError.classList.add("hidden");
-        validate = true;
-    }
-});
-
 // Display Instructions
 let goBtn = document.getElementById("goBtn");
 goBtn.addEventListener("click", function(){
@@ -63,6 +40,29 @@ goBtn.addEventListener("click", function(){
         emptyBox[1].classList.add("hidden");
         validate = true;
     }
+
+    // Checking Valid Username, email address
+    userName.addEventListener("input", function() {
+        if(nameRegex.test(userName.value) === false) {
+            emptyBox[0].classList.add("hidden");
+            nameError.classList.remove("hidden");
+            validate = false;
+        } else {
+            nameError.classList.add("hidden");
+            validate = true;
+        } 
+    });
+
+    email.addEventListener("input", function(){
+        if(emailRegex.test(email.value) === false) {
+            emptyBox[1].classList.add("hidden");
+            emailError.classList.remove("hidden");
+            validate = false;
+        } else {
+            emailError.classList.add("hidden");
+            validate = true;
+        }
+    });
 
     if(validate === true) {
         login.style.display = "none";
@@ -281,11 +281,9 @@ let startBtn = document.getElementById("startBtn");
 let timer = document.getElementById("timer");
 
 startBtn.addEventListener("click", function(){
-    if(validate === true) {
-        instructions.style.display = "none";
-        displayQuestion(0);
-        callTimer = setInterval(updateTime, 1000);
-    }
+    instructions.style.display = "none";
+    displayQuestion(0);
+    callTimer = setInterval(updateTime, 1000);
 });
 
 // Display Answer Sheet

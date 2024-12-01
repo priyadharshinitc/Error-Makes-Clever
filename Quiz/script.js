@@ -281,9 +281,11 @@ let startBtn = document.getElementById("startBtn");
 let timer = document.getElementById("timer");
 
 startBtn.addEventListener("click", function(){
-    instructions.style.display = "none";
-    displayQuestion(0);
-    callTimer = setInterval(updateTime, 1000);
+    if(validate === true) {
+        instructions.style.display = "none";
+        displayQuestion(0);
+        callTimer = setInterval(updateTime, 1000);
+    }
 });
 
 // Display Answer Sheet

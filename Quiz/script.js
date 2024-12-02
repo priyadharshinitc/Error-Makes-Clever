@@ -251,7 +251,7 @@ showResultBtn.addEventListener("click", function() {
 // Timer
 let timerIcon = document.getElementById("timerIcon");
 let runTime = document.getElementById("runTime");
-let startTime = 1.6;
+let startTime = 1.5;
 let time = startTime * 60;
 let minutes = 0;
 let seconds = 0;

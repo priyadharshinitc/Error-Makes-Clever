@@ -21,6 +21,8 @@ let nameError = document.getElementById("nameError");
 let emailError = document.getElementById("emailError");
 
 let validate = true;
+let userValid = true;
+let emailValid = true;
 
 // Checking Valid Username, email address
 userName.addEventListener("input", function() {
@@ -28,9 +30,11 @@ userName.addEventListener("input", function() {
         emptyBox[0].classList.add("hidden");
         nameError.classList.remove("hidden");
         validate = false;
+        userValid = false;
     } else {
         nameError.classList.add("hidden");
         validate = true;
+        userValid = true;
     }
 });
 
@@ -39,9 +43,11 @@ email.addEventListener("input", function(){
         emptyBox[1].classList.add("hidden");
         emailError.classList.remove("hidden");
         validate = false;
+        emailValid = false;
     } else {
         emailError.classList.add("hidden");
         validate = true;
+        emailValid = true;
     }
 });
 
@@ -64,7 +70,7 @@ goBtn.addEventListener("click", function(){
         validate = true;
     }
 
-    if(validate === true) {
+    if((validate === true) && (userValid === true) &&(emailValid === true)) {
         login.style.display = "none";
         instructions.style.display = "block";
     }
@@ -228,7 +234,7 @@ let resultSection = document.getElementById("resultSection");
 let yourName = document.getElementById("yourName");
 let yourScore = document.getElementById("yourScore");
 
-function showResult() {
+function showResult() {   
     scoreCalculation();
     resultSection.style.display = "flex";
     yourName.innerHTML = `${userName.value}`;
@@ -256,14 +262,6 @@ function updateTime() {
     minutes = (minutes < 10) ? ('0' + minutes) : minutes;
     seconds = (seconds < 10) ? ('0' + seconds) : seconds;
     runTime.innerHTML = `${minutes}:${seconds}`;
-    time--;
-    time = (time < 0) ? 0 : time;
-    if(time < 30) {
-        timerIcon.style.fill = "#FFF";
-        timer.style.backgroundColor = "red";
-        timer.style.color = "white";
-        timer.classList.add("animate-pulse");
-    }
 
     if(time === 0) {
         timer.style.display = "none";
@@ -271,8 +269,19 @@ function updateTime() {
         showResult();
     }
 
-    if(time < 0) {
+    if(time > 0) {
+        time--;
+    } else {
         clearInterval(callTimer);
+        time = 0;
+    }
+    
+    // time = (time < 0) ? 0 : time;
+    if(time < 30) {
+        timerIcon.style.fill = "#FFF";
+        timer.style.backgroundColor = "red";
+        timer.style.color = "white";
+        timer.classList.add("animate-pulse");
     }
 }
 
@@ -290,19 +299,35 @@ startBtn.addEventListener("click", function(){
 let viewAnswer = document.getElementById("viewAnswer");
 let answerSheet = document.getElementById("answerSheet");
 
-viewAnswer.addEventListener("click", function() {
-    setTimeout(() => {
-        resultSection.style.display = "none";
-    }, 200);
+viewAnswer.addEventListener("click", async function() {
+    resultSection.innerHTML = "Loading answer sheet...";
     
+    try {
+        // Generate answer sheet asynchronously
+        let wait = await generateAnswerSheet();
+
+        // Remove loading indicator and display answer sheet
+        if(wait) {
+            resultSection.style.display = "none";
+            answerSheet.style.display = "block";
+        }
+        
+    } catch(error) {
+        // Handle errors here, e.g., display an error message
+        console.error("Error generating answer sheet:", error);
+        resultSection.innerHTML = "Error generating answer sheet. Please try again.";
+    }
+});
+
+async function generateAnswerSheet() {
     for(let i = 0; i < questionSet.length; i++) {
         let displaySet = document.createElement("div");
         displaySet.className = "mb-3";
-
+    
         let qnHeader = document.createElement("h1");
         qnHeader.className = "text-xl";
         qnHeader.innerHTML = `<strong>${qnaDivs[i].querySelector("h1").textContent}</strong>` ;
-
+    
         let ansDiv = document.createElement("ul");
         ansDiv.className = "mt-3 flex flex-col justify-center items-left";
         ansDiv.style.listStyleType = "disc";
@@ -312,13 +337,13 @@ viewAnswer.addEventListener("click", function() {
             let inputBox = label.querySelector('input[type="radio"]');
             let li = document.createElement("li");
             li.textContent = label.textContent;
-
+    
             if((inputBox.checked) && (inputBox.getAttribute("data-validate") === "true")) {
                 li.style.color = "green";
             } else if((inputBox.checked) && (inputBox.getAttribute("data-validate") === "false")){
                 li.style.color = "red";
             }
-
+    
             if(inputBox.getAttribute("data-validate") === "true"){
                 li.style.color = "green";
                 li.style.fontWeight = "bold";
@@ -331,6 +356,5 @@ viewAnswer.addEventListener("click", function() {
         displaySet.appendChild(ansDiv);
         answerSheet.appendChild(displaySet);
     }
-
-    answerSheet.style.display = "block";
-});
+    return true;
+}

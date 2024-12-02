@@ -6,8 +6,9 @@
     <title>CAPTCHA Generator</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-zinc-300 flex justify-center items-center h-screen">
-    <main class="p-2 bg-white rounded-xl flex flex-col justify-evenly items-center w-1/4 h-[200px]">
+<body class="bg-zinc-300 h-screen flex flex-col justify-center items-center">
+    <h1 class="block text-xl text-center font-bold mt-4">CAPTCHA Generator</h1>
+    <main class="my-4 mx-auto p-2 bg-white rounded-xl flex flex-col justify-evenly items-center w-3/4 md:w-2/5 lg:w-[350px] h-[200px]">
         <div class="flex">
             <div id="display" class="italic font-mono text-2xl mr-4"></div>
             <svg id="reloadBtn" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"             stroke-width="1.5" stroke="currentColor" class="size-6 w-10 h-10 bg-blue-600 text-white p-2 rounded-xl cursor-pointer">
@@ -15,7 +16,7 @@
             </svg>
         </div>
           
-        <div>
+        <div class="flex flex-col gap-2 md:flex-row">
             <!-- Max Length of 6 characters are allowed in input box -->
             <input type="text" id="inputBox" class="border-2 border-black rounded-md mr-2" autocomplete="off" maxlength="6">
             <button id="verifyBtn" class="px-3 py-1 bg-green-700 text-white rounded-xl">Verify</button>
